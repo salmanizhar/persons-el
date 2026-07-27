@@ -518,7 +518,8 @@ select:focus-visible {
   font-weight: 800;
   color: #fff;
 }
-.footer-mark span {
+.footer-mark span,
+.footer-word span {
   color: var(--orange);
 }
 .footer-label {
@@ -661,6 +662,16 @@ select:focus-visible {
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 5px;
+}
+.quote-contact-lines {
+  margin-top: 32px;
+  gap: 18px;
+}
+.quote-contact-lines a,
+.quote-contact-lines p {
+  min-width: 0;
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
 }
 .legal-page h1 {
   font-size: clamp(3rem, 7vw, 6rem);
@@ -1083,22 +1094,12 @@ select:focus-visible {
   overflow: hidden;
 }
 .trust-track {
-  display: flex;
-  width: max-content;
-  transform: translateX(-50%);
-  animation: trust-marquee 24s linear infinite;
-  will-change: transform;
-}
-.trust-rail:hover .trust-track {
-  animation-play-state: paused;
-}
-.trust-group {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: max(100vw, 1100px);
-  flex: none;
+  width: min(1400px, 100%);
+  margin: auto;
 }
-.trust-group span {
+.trust-track span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1108,27 +1109,10 @@ select:focus-visible {
   text-transform: uppercase;
   white-space: nowrap;
 }
-.trust-group span:before {
+.trust-track span + span:before {
   content: "✦";
   margin-right: 20px;
   font-size: 1rem;
-}
-@keyframes trust-marquee {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .trust-track {
-    transform: none;
-    animation: none;
-  }
-  .trust-group[aria-hidden="true"] {
-    display: none;
-  }
 }
 .why-section {
   background: #fff;
@@ -1298,7 +1282,7 @@ select:focus-visible {
   .hero-badge strong {
     font-size: 1.4rem;
   }
-  .trust-group span {
+  .trust-track span {
     padding: 15px 18px;
   }
   .why-section {
@@ -1436,6 +1420,7 @@ select:focus-visible {
 .footer-intro p:last-child {
   max-width: 320px;
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -1448,15 +1433,15 @@ select:focus-visible {
 .footer-word {
   position: absolute;
   left: 50%;
-  bottom: -88px;
+  bottom: 12px;
   transform: translateX(-50%);
   margin: 0;
   color: rgba(255, 255, 255, 0.045);
-  font-size: clamp(6rem, 16vw, 15rem);
-  font-weight: 900;
-  line-height: 1;
+  font-size: clamp(5rem, 11vw, 11rem);
+  font-weight: 800;
+  line-height: 0.82;
   white-space: nowrap;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.055em;
 }
 @media (max-width: 900px) {
   .faq-grid {
@@ -1524,7 +1509,7 @@ h2,
   font-weight: 700;
 }
 .footer-word {
-  font-weight: 900;
+  font-weight: 800;
 }
 
 body {
@@ -2187,6 +2172,9 @@ body {
 .about-image-hero .image-overlay-hero-image {
   object-position: center 45%;
 }
+.contact-image-hero .image-overlay-hero-image {
+  object-position: center 42%;
+}
 .image-overlay-hero-content {
   position: relative;
   z-index: 2;
@@ -2235,4 +2223,15 @@ body {
     font-size: 1rem;
     line-height: 1.55;
   }
+}
+
+/* Keep condensed display glyphs readable across the entire site. */
+body h1,
+body h2,
+body h3,
+.metric strong,
+.site-footer .footer-mark,
+.site-footer .footer-word {
+  letter-spacing: 0.01em;
+  font-kerning: normal;
 }

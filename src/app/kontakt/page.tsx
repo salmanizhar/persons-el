@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { QuoteSection } from "@/components/quote-section";
-import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Kontakt och offert",
   description:
@@ -11,38 +10,21 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="page-hero contact-hero">
-        <div className="shell page-hero-grid">
-          <div className="page-hero-copy">
-            <p className="eyebrow">Kontakt</p>
-            <h1>
-              Vad behöver
-              <br />
-              kopplas?
-            </h1>
-            <div className="contact-lines">
-              <a href={`tel:${site.phoneHref}`}>
-                <span>Telefon</span>
-                {site.phone}
-              </a>
-              <a href={`mailto:${site.email}`}>
-                <span>E-post</span>
-                {site.email}
-              </a>
-              <p>
-                <span>Område</span>Helsingborg med omnejd
-              </p>
-            </div>
-          </div>
-          <div className="page-hero-image">
-            <Image
-              src="/images/hero-contact-electrician.png"
-              alt="Elektriker som går igenom ett kommande arbete med en kund"
-              fill
-              priority
-              sizes="(max-width: 900px) 100vw, 44vw"
-            />
-          </div>
+      <section className="image-overlay-hero contact-image-hero">
+        <Image
+          className="image-overlay-hero-image"
+          src="/images/hero-contact-electrician.png"
+          alt="Elektriker som går igenom ett kommande arbete med en kund"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="shell image-overlay-hero-content">
+          <h1>Vad behöver kopplas?</h1>
+          <p>
+            Berätta vad du behöver hjälp med, så återkommer vi med ett tydligt
+            nästa steg.
+          </p>
         </div>
       </section>
       <QuoteSection />

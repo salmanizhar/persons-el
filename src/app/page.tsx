@@ -48,18 +48,10 @@ export default function Home() {
         </div>
         <div className="trust-rail">
           <div className="trust-track">
-            <div className="trust-group">
-              <span>Snabb & pålitlig service</span>
-              <span>Transparent prissättning</span>
-              <span>Privat & företag</span>
-              <span>Helsingborg med omnejd</span>
-            </div>
-            <div className="trust-group" aria-hidden="true">
-              <span>Snabb & pålitlig service</span>
-              <span>Transparent prissättning</span>
-              <span>Privat & företag</span>
-              <span>Helsingborg med omnejd</span>
-            </div>
+            <span>Snabb & pålitlig service</span>
+            <span>Transparent prissättning</span>
+            <span>Privat & företag</span>
+            <span>Helsingborg med omnejd</span>
           </div>
         </div>
       </section>

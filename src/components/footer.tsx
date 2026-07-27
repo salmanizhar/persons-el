@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <div className="footer-intro">
-          <p className="footer-mark">
+          <p className="footer-mark" lang="sv" translate="no">
             PERSSONS EL<span>.</span>
           </p>
           <p>
@@ -39,8 +39,8 @@ export function Footer() {
         <p>© {new Date().getFullYear()} Perssons El</p>
         <p>Rätt kopplat. Från början.</p>
       </div>
-      <p className="footer-word" aria-hidden="true">
-        PERSSONS EL
+      <p className="footer-word" aria-hidden="true" lang="sv" translate="no">
+        PERSSONS EL<span>.</span>
       </p>
     </footer>
   );

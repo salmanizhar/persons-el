@@ -1,3 +1,4 @@
+import { site } from "@/lib/site";
 import { QuoteForm } from "./quote-form";
 
 export function QuoteSection() {
@@ -11,6 +12,19 @@ export function QuoteSection() {
             Beskriv jobbet kort så återkommer vi med nästa steg. För akuta
             ärenden – ring oss direkt.
           </p>
+          <div className="contact-lines quote-contact-lines">
+            <a href={`tel:${site.phoneHref}`}>
+              <span>Telefon</span>
+              {site.phone}
+            </a>
+            <a href={`mailto:${site.email}`}>
+              <span>E-post</span>
+              {site.email}
+            </a>
+            <p>
+              <span>Område</span>Helsingborg med omnejd
+            </p>
+          </div>
         </div>
         <QuoteForm />
       </div>
