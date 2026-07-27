@@ -423,8 +423,8 @@ select:focus-visible {
 }
 .quote-grid {
   display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  gap: 90px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px;
 }
 .quote-grid > div > p:not(.eyebrow) {
   color: #b6c6cf;
@@ -438,7 +438,7 @@ select:focus-visible {
 .field {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 2px;
 }
 .field-wide {
   grid-column: 1/-1;
@@ -450,13 +450,21 @@ select:focus-visible {
   letter-spacing: 0.06em;
 }
 .field input,
-.field textarea,
 .field select {
   color: #fff;
   background: transparent;
   border: 0;
   border-bottom: 1px solid #648091;
-  padding: 10px 2px;
+  min-height: 30px;
+  padding: 3px 2px;
+  outline: 0;
+}
+.field textarea {
+  color: #fff;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #648091;
+  padding: 4px 2px;
   outline: 0;
 }
 .field input:focus,
@@ -943,7 +951,7 @@ select:focus-visible {
   text-transform: uppercase;
 }
 .hero-reference h1 span {
-  color: var(--blue-2);
+  color: var(--ink);
 }
 .hero-reference .lead {
   max-width: 570px;
@@ -1075,12 +1083,22 @@ select:focus-visible {
   overflow: hidden;
 }
 .trust-track {
-  width: min(1400px, 100%);
-  margin: auto;
+  display: flex;
+  width: max-content;
+  transform: translateX(-50%);
+  animation: trust-marquee 24s linear infinite;
+  will-change: transform;
+}
+.trust-rail:hover .trust-track {
+  animation-play-state: paused;
+}
+.trust-group {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  width: max(100vw, 1100px);
+  flex: none;
 }
-.trust-track span {
+.trust-group span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1090,10 +1108,27 @@ select:focus-visible {
   text-transform: uppercase;
   white-space: nowrap;
 }
-.trust-track span + span:before {
+.trust-group span:before {
   content: "✦";
   margin-right: 20px;
   font-size: 1rem;
+}
+@keyframes trust-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trust-track {
+    transform: none;
+    animation: none;
+  }
+  .trust-group[aria-hidden="true"] {
+    display: none;
+  }
 }
 .why-section {
   background: #fff;
@@ -1115,6 +1150,14 @@ select:focus-visible {
   letter-spacing: -0.055em;
   text-transform: uppercase;
   margin: 0 0 24px;
+}
+.why-title-accent {
+  color: var(--blue-2);
+}
+@media (min-width: 901px) {
+  .why-copy h2 {
+    white-space: nowrap;
+  }
 }
 .why-copy p {
   max-width: 720px;
@@ -1203,10 +1246,19 @@ select:focus-visible {
     padding-top: 44px;
   }
   .hero-reference .hero-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: stretch;
+    gap: 8px;
   }
   .hero-reference .button {
     width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding-inline: 12px;
+    gap: 8px;
+    font-size: 0.72rem;
+    white-space: nowrap;
   }
   .hero-reference .hero-visual {
     height: 430px;
@@ -1246,12 +1298,7 @@ select:focus-visible {
   .hero-badge strong {
     font-size: 1.4rem;
   }
-  .trust-track {
-    display: flex;
-    overflow-x: auto;
-  }
-  .trust-track span {
-    min-width: max-content;
+  .trust-group span {
     padding: 15px 18px;
   }
   .why-section {
@@ -1869,6 +1916,7 @@ body {
 /* Image-led inner-page heroes */
 .page-hero:has(.page-hero-grid) {
   padding: 0;
+  container-type: inline-size;
 }
 .page-hero-grid {
   display: grid;
@@ -1889,7 +1937,7 @@ body {
 .page-hero-image {
   position: relative;
   height: 590px;
-  margin-right: calc((100vw - min(1180px, calc(100vw - 48px))) / -2);
+  margin-right: calc((100cqw - min(1180px, calc(100cqw - 48px))) / -2);
 }
 .page-hero-image:after {
   content: "";
@@ -1998,7 +2046,6 @@ body {
 }
 .quote-form {
   background: #fff;
-  border-top: 4px solid var(--orange);
   padding: 42px 44px;
   box-shadow: 0 18px 48px rgba(17, 26, 58, 0.08);
 }

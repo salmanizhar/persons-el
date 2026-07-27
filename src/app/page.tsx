@@ -48,10 +48,18 @@ export default function Home() {
         </div>
         <div className="trust-rail">
           <div className="trust-track">
-            <span>Snabb & pålitlig service</span>
-            <span>Transparent prissättning</span>
-            <span>Privat & företag</span>
-            <span>Helsingborg med omnejd</span>
+            <div className="trust-group">
+              <span>Snabb & pålitlig service</span>
+              <span>Transparent prissättning</span>
+              <span>Privat & företag</span>
+              <span>Helsingborg med omnejd</span>
+            </div>
+            <div className="trust-group" aria-hidden="true">
+              <span>Snabb & pålitlig service</span>
+              <span>Transparent prissättning</span>
+              <span>Privat & företag</span>
+              <span>Helsingborg med omnejd</span>
+            </div>
           </div>
         </div>
       </section>
@@ -67,8 +75,8 @@ export default function Home() {
           </div>
           <div className="why-copy">
             <h2>
-              Rätt elektriker betyder säkerhet, kvalitet och en lösning som
-              håller.
+              <span>El gjort rätt.</span>{" "}
+              <span className="why-title-accent">Från början.</span>
             </h2>
             <p>
               Vi kombinerar yrkesskicklighet med raka besked och respekt för din
