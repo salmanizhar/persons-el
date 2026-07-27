@@ -2334,7 +2334,8 @@ body h3,
     grid-template-columns: 18px minmax(0, 1fr);
     justify-content: initial;
     align-items: center;
-    padding-inline: 14px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
     font-weight: 500;
     text-align: left;
   }
