@@ -296,11 +296,22 @@ select:focus-visible {
   border-bottom: 1px solid var(--line);
   transition:
     background 0.2s,
-    padding 0.2s;
+    transform 0.2s;
 }
 .service-row:hover {
   background: #fff;
-  padding-inline: 22px;
+  transform: translateX(6px);
+}
+
+/* Defer layout and paint work for sections below the initial viewport. */
+.services-section,
+.projects-preview,
+.faq-section,
+.quote-section,
+.conversion-banner,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 800px;
 }
 .service-index,
 .project-label {

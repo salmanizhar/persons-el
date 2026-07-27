@@ -12,7 +12,7 @@ export function Header() {
             width={300}
             height={82}
             sizes="(max-width: 360px) 125px, 188px"
-            quality={60}
+            quality={40}
             priority
           />
         </Link>

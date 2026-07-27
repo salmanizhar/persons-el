@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     inlineCss: true,
   },
   images: {
-    qualities: [60, 75],
+    qualities: [40, 60, 75],
   },
 };
 
