@@ -951,7 +951,7 @@ select:focus-visible {
   text-transform: uppercase;
 }
 .hero-reference h1 span {
-  color: var(--ink);
+  color: var(--blue-2);
 }
 .hero-reference .lead {
   max-width: 570px;
@@ -1813,7 +1813,7 @@ body {
   display: block;
 }
 .hero-reference h1 .hero-title-accent {
-  color: var(--blue-2);
+  color: var(--ink);
 }
 @media (min-width: 901px) {
   .hero-title-line {
