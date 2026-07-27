@@ -41,7 +41,7 @@ export const services: Service[] = [
     title: "Elcentraler",
     short: "Ordning, kapacitet och tryggare eldistribution.",
     intro: "En modern och tydligt märkt elcentral gör elanläggningen säkrare och enklare att underhålla. Vi hjälper till med kontroll, komplettering och byte.",
-    image: "/images/electrical-panel.jpg",
+    image: "/images/panel-detail-v2.png",
     alt: "Professionellt installerad elcentral med säkringar",
     bullets: ["Byte och uppgradering av elcentral", "Jordfelsbrytare och säkringar", "Felsökning och dokumentation"],
   },

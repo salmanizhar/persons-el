@@ -43,3 +43,15 @@ body{font-size:17px;line-height:1.55;letter-spacing:.005em}
 .hero-reference .hero-grid{grid-template-columns:.9fr 1.1fr;gap:72px;min-height:610px}.hero-reference .hero-copy{padding:72px 0}.hero-reference h1{font-size:clamp(4rem,6vw,6.2rem)}.hero-reference .lead{max-width:540px}.hero-reference .hero-visual{height:560px}.hero-reference .hero-visual:before{inset:58px -100vw 18px 18%;background:var(--blue)}.hero-reference .hero-photo-main{inset:30px 0 48px 0;border-radius:0}.hero-reference .hero-photo-main:after{background:linear-gradient(90deg,rgba(17,26,58,.04),rgba(17,26,58,.12))}
 @media(max-width:900px){.hero-reference .hero-grid{grid-template-columns:1fr;gap:0}.hero-reference .hero-copy{padding:58px 0 46px}.hero-reference .hero-visual{height:460px}.hero-reference .hero-visual:before{inset:48px -24px 0 12%}.hero-reference .hero-photo-main{inset:0 0 28px 0}}
 @media(max-width:700px){.hero-reference .hero-visual{height:360px;margin-inline:-16px}.hero-reference .hero-visual:before{inset:34px 0 0 18%}.hero-reference .hero-photo-main{inset:0 16px 24px 0}.hero-reference .hero-copy{padding-bottom:36px}}
+
+/* Balanced desktop hero proportions */
+@media(min-width:901px){.hero-reference .hero-grid{grid-template-columns:1fr 1.08fr;gap:52px;min-height:560px;align-items:start}.hero-reference .hero-copy{padding:54px 0 46px}.hero-reference h1{font-size:clamp(4rem,5vw,5.2rem);line-height:.9;max-width:560px}.hero-reference .lead{max-width:500px;margin:24px 0 26px}.hero-reference .hero-actions{gap:10px}.hero-reference .button{min-height:50px;padding-inline:22px}.hero-reference .hero-visual{height:520px;margin-top:54px}.hero-reference .hero-visual:before{inset:28px -100vw 0 18%}.hero-reference .hero-photo-main{inset:0 0 28px 0}}
+.hero-title-line{display:block}.hero-reference h1 .hero-title-accent{color:var(--blue-2)}
+@media(min-width:901px){.hero-title-line{white-space:nowrap}.hero-reference h1{font-size:clamp(3.8rem,4.4vw,4.75rem);max-width:none}}
+@media(max-width:900px){.hero-title-line{white-space:normal}}
+
+/* Contained workmanship feature */
+.project-feature{background:var(--paper);padding:96px 0;color:#fff}.project-feature .feature-grid{background:var(--blue);grid-template-columns:1.08fr .92fr;min-height:560px;overflow:hidden}.project-feature .feature-image{margin-left:0}.project-feature .feature-copy{padding:72px 64px}.project-feature .feature-copy p:not(.eyebrow){color:#e1e4f0}
+@media(max-width:900px){.project-feature{padding:72px 0}.project-feature .feature-grid{grid-template-columns:1fr}.project-feature .feature-image{height:460px}.project-feature .feature-copy{padding:58px 48px}}
+@media(max-width:700px){.project-feature{padding:56px 0}.project-feature .feature-image{height:330px}.project-feature .feature-copy{padding:42px 24px}.project-feature .feature-copy h2{font-size:2.6rem}}
+.services-section{background:var(--paper)}.projects-preview{background:#fff;border-top:1px solid var(--line)}
