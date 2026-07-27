@@ -13,13 +13,9 @@ export default function Home() {
           <h1>Smartare el.<br /><span>Tryggare vardag.</span></h1>
           <p className="lead">Säkra och genomtänkta elinstallationer för hem, fastigheter och företag. Tydliga besked, noggrant utfört och rätt kopplat från början.</p>
           <div className="hero-actions"><a className="button" href="#offert">Boka elektriker <Arrow /></a><Link className="button button-secondary" href="/tjanster">Se våra tjänster</Link></div>
-          <div className="hero-contact"><span>Ring oss</span><a href={`tel:${site.phoneHref}`}>{site.phone}</a><i aria-hidden="true" /><Link href="/projekt">Projekt</Link><Link href="/kontakt">Kontakt</Link></div>
         </div>
         <div className="hero-visual" aria-label="Exempel på våra elinstallationer">
-          <div className="hero-photo hero-photo-main"><Image src="/images/hero.jpg" alt="Färdig belysningsinstallation av Perssons El" fill sizes="(max-width: 900px) 100vw, 48vw" priority /></div>
-          <div className="hero-photo hero-photo-detail"><Image src="/images/electrical-panel.jpg" alt="Noggrant installerad elcentral" fill sizes="(max-width: 700px) 44vw, 18vw" /></div>
-          <div className="service-tag tag-one"><span aria-hidden="true">⚡</span> Elektriker</div><div className="service-tag tag-two"><span aria-hidden="true">▦</span> Elcentraler</div><div className="service-tag tag-three"><span aria-hidden="true">⌁</span> Elreparationer</div>
-          <div className="hero-badge"><strong>24/7</strong><small>Trygg kontakt</small></div>
+          <div className="hero-photo hero-photo-main"><Image src="/images/hero.jpg" alt="Färdig belysningsinstallation av Perssons El" fill sizes="(max-width: 900px) 100vw, 50vw" priority /></div>
         </div>
       </div>
       <div className="trust-rail"><div className="trust-track"><span>Snabb & pålitlig service</span><span>Transparent prissättning</span><span>Privat & företag</span><span>Helsingborg med omnejd</span></div></div>

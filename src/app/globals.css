@@ -37,3 +37,9 @@ body{font-size:17px;line-height:1.55;letter-spacing:.005em}
 @media(max-width:360px){.brand img{width:125px}.header-call,.mobile-menu summary{width:40px;height:40px;min-height:40px}.hero-contact{column-gap:10px}}
 .mobile-menu>div{position:fixed;right:16px;top:82px;width:min(260px,calc(100vw - 32px))}
 @media(max-width:700px){.mobile-menu>div{top:72px}}
+.site-header{box-shadow:none}
+
+/* Simplified hero composition */
+.hero-reference .hero-grid{grid-template-columns:.9fr 1.1fr;gap:72px;min-height:610px}.hero-reference .hero-copy{padding:72px 0}.hero-reference h1{font-size:clamp(4rem,6vw,6.2rem)}.hero-reference .lead{max-width:540px}.hero-reference .hero-visual{height:560px}.hero-reference .hero-visual:before{inset:58px -100vw 18px 18%;background:var(--blue)}.hero-reference .hero-photo-main{inset:30px 0 48px 0;border-radius:0}.hero-reference .hero-photo-main:after{background:linear-gradient(90deg,rgba(17,26,58,.04),rgba(17,26,58,.12))}
+@media(max-width:900px){.hero-reference .hero-grid{grid-template-columns:1fr;gap:0}.hero-reference .hero-copy{padding:58px 0 46px}.hero-reference .hero-visual{height:460px}.hero-reference .hero-visual:before{inset:48px -24px 0 12%}.hero-reference .hero-photo-main{inset:0 0 28px 0}}
+@media(max-width:700px){.hero-reference .hero-visual{height:360px;margin-inline:-16px}.hero-reference .hero-visual:before{inset:34px 0 0 18%}.hero-reference .hero-photo-main{inset:0 16px 24px 0}.hero-reference .hero-copy{padding-bottom:36px}}
