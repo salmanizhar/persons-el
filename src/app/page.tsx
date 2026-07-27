@@ -15,7 +15,7 @@ export default function Home() {
           <div className="hero-actions"><a className="button" href="#offert">Boka elektriker <Arrow /></a><Link className="button button-secondary" href="/tjanster">Se våra tjänster</Link></div>
         </div>
         <div className="hero-visual" aria-label="Exempel på våra elinstallationer">
-          <div className="hero-photo hero-photo-main"><Image src="/images/hero-electrician-v2.png" alt="Elektriker som kontrollerar en modern elcentral i ett svenskt hem" fill sizes="(max-width: 900px) 100vw, 50vw" priority /></div>
+          <div className="hero-photo hero-photo-main"><Image src="/images/hero-home-electrician-v3.png" alt="Elektriker som kontrollerar en modern elcentral i ett svenskt hem" fill sizes="(max-width: 900px) 100vw, 50vw" priority /></div>
         </div>
       </div>
       <div className="trust-rail"><div className="trust-track"><span>Snabb & pålitlig service</span><span>Transparent prissättning</span><span>Privat & företag</span><span>Helsingborg med omnejd</span></div></div>
