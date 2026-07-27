@@ -2262,3 +2262,34 @@ body h3,
     height: 21px;
   }
 }
+
+/* Keep mobile footer metadata and watermark inside the viewport. */
+@media (max-width: 700px) {
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 0.62rem;
+  }
+  .footer-bottom p {
+    margin: 0;
+    white-space: nowrap;
+  }
+  .footer-bottom p:last-child {
+    text-align: right;
+  }
+  .site-footer .footer-word {
+    width: calc(100% - 32px);
+    bottom: 12px;
+    font-size: clamp(2.65rem, 15vw, 3.75rem);
+    line-height: 0.9;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .why-note {
+    display: none;
+  }
+}
