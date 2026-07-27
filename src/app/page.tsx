@@ -40,7 +40,8 @@ export default function Home() {
                 alt="Elektriker som kontrollerar en modern elcentral i ett svenskt hem"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
-                priority
+                preload
+                fetchPriority="high"
               />
             </div>
           </div>
