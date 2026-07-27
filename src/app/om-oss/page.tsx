@@ -4,28 +4,21 @@ import { QuoteSection } from "@/components/quote-section";
 export default function AboutPage() {
   return (
     <>
-      <section className="page-hero">
-        <div className="shell page-hero-grid">
-          <div className="page-hero-copy">
-            <p className="eyebrow">Om Perssons El</p>
-            <h1>
-              Yrkesstolthet i<br />
-              varje anslutning.
-            </h1>
-            <p>
-              Vi tror på tydlig kommunikation, ordning i arbetet och lösningar
-              som fungerar långt efter att verktygslådan är stängd.
-            </p>
-          </div>
-          <div className="page-hero-image">
-            <Image
-              src="/images/hero-about-perssons-el.png"
-              alt="Elektriker i en välorganiserad professionell verkstad"
-              fill
-              priority
-              sizes="(max-width: 900px) 100vw, 44vw"
-            />
-          </div>
+      <section className="image-overlay-hero about-image-hero">
+        <Image
+          className="image-overlay-hero-image"
+          src="/images/hero-about-perssons-el.png"
+          alt="Elektriker i en välorganiserad professionell verkstad"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="shell image-overlay-hero-content">
+          <h1>Yrkesstolthet i varje anslutning.</h1>
+          <p>
+            Vi tror på tydlig kommunikation, ordning i arbetet och lösningar som
+            fungerar långt efter att verktygslådan är stängd.
+          </p>
         </div>
       </section>
       <section className="section about-section">

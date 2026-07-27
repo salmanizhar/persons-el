@@ -14,29 +14,21 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="page-hero services-overview-hero">
-        <div className="shell services-hero-grid">
-          <div className="services-hero-copy">
-            <p className="eyebrow">Tjänster</p>
-            <h1>
-              Elhjälp för hela
-              <br />
-              anläggningen.
-            </h1>
-            <p>
-              Planering, installation och felsökning – utfört med fokus på
-              säkerhet, funktion och ett snyggt slutresultat.
-            </p>
-          </div>
-          <div className="services-hero-image">
-            <Image
-              src="/images/hero-services-overview.png"
-              alt="Elektriker som genomför en säkerhetskontroll av en modern elcentral"
-              fill
-              priority
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
-          </div>
+      <section className="image-overlay-hero services-image-hero">
+        <Image
+          className="image-overlay-hero-image"
+          src="/images/hero-services-overview.png"
+          alt="Elektriker som genomför en säkerhetskontroll av en modern elcentral"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="shell image-overlay-hero-content">
+          <h1>Elhjälp för hela anläggningen.</h1>
+          <p>
+            Planering, installation och felsökning – utfört med fokus på
+            säkerhet, funktion och ett snyggt slutresultat.
+          </p>
         </div>
       </section>
       <section className="section">

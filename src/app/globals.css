@@ -2142,3 +2142,97 @@ body {
     object-position: 58% center;
   }
 }
+
+/* Shared full-image heroes for primary company pages. */
+.image-overlay-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  min-height: 520px;
+  overflow: hidden;
+  background: var(--ink);
+  color: #fff;
+}
+.image-overlay-hero:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 18, 48, 0.7) 0%,
+    rgba(17, 26, 58, 0.9) 50%,
+    rgba(8, 18, 48, 0.7) 100%
+  );
+}
+.image-overlay-hero:after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  inset: auto 0 0;
+  height: 4px;
+  background: var(--orange);
+}
+.image-overlay-hero-image {
+  z-index: 0;
+  object-fit: cover;
+}
+.services-image-hero .image-overlay-hero-image {
+  object-position: center 42%;
+}
+.projects-image-hero .image-overlay-hero-image {
+  object-position: center 58%;
+}
+.about-image-hero .image-overlay-hero-image {
+  object-position: center 45%;
+}
+.image-overlay-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-block: 104px;
+  text-align: center;
+}
+.image-overlay-hero h1 {
+  max-width: 920px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: clamp(4.5rem, 7vw, 7rem);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.image-overlay-hero-content > p {
+  max-width: 680px;
+  margin: 30px auto 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.16rem;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .image-overlay-hero {
+    min-height: 400px;
+  }
+  .image-overlay-hero:before {
+    background: linear-gradient(
+      90deg,
+      rgba(8, 18, 48, 0.76),
+      rgba(17, 26, 58, 0.92) 50%,
+      rgba(8, 18, 48, 0.76)
+    );
+  }
+  .image-overlay-hero-content {
+    padding-block: 72px;
+  }
+  .image-overlay-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.25rem);
+    line-height: 0.92;
+  }
+  .image-overlay-hero-content > p {
+    margin-top: 22px;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+}
