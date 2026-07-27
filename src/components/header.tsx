@@ -31,7 +31,11 @@ export function Header() {
             <Link href="/kontakt">Kontakt</Link>
           </div>
         </details>
-        <a className="header-call" href="tel:+46768107050">
+        <a
+          className="header-call"
+          href="tel:+46768107050"
+          aria-label="Ring Perssons El på 0768-107 050"
+        >
           <span className="header-call-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none">
               <path

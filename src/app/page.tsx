@@ -10,7 +10,6 @@ export default function Home() {
       <section className="hero hero-reference">
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <p className="hero-kicker">Auktoriserad elektriker i Helsingborg</p>
             <h1>
               <span className="hero-title-line">Smartare el.</span>
               <span className="hero-title-line hero-title-accent">
@@ -57,14 +56,6 @@ export default function Home() {
       </section>
       <section className="section why-section">
         <div className="shell why-grid">
-          <div>
-            <p className="eyebrow">Varför Perssons El</p>
-            <p className="why-note">
-              Lokalt hantverk.
-              <br />
-              Professionellt ansvar.
-            </p>
-          </div>
           <div className="why-copy">
             <h2>
               <span>El gjort rätt.</span>{" "}
