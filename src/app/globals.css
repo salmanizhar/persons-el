@@ -306,7 +306,7 @@ select:focus-visible {
 .project-label {
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: var(--orange);
+  color: var(--blue);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1433,7 +1433,7 @@ select:focus-visible {
   bottom: 12px;
   transform: translateX(-50%);
   margin: 0;
-  color: rgba(255, 255, 255, 0.045);
+  color: #697393;
   font-size: clamp(5rem, 11vw, 11rem);
   font-weight: 800;
   line-height: 0.82;
