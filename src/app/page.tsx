@@ -144,6 +144,7 @@ export default function Home() {
                     alt={project.alt}
                     fill
                     sizes="(max-width: 700px) 100vw, 33vw"
+                    quality={60}
                   />
                 </div>
                 <p className="project-label">{project.label}</p>

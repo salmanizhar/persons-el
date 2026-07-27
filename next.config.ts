@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   experimental: {
     inlineCss: true,
   },
+  images: {
+    qualities: [60, 75],
+  },
 };
 
 export default nextConfig;

@@ -1387,7 +1387,7 @@ select:focus-visible {
 .conversion-banner {
   background:
     linear-gradient(90deg, rgba(11, 39, 56, 0.94), rgba(18, 59, 86, 0.86)),
-    url("/images/cta-wiring-background-v2.png") center/cover;
+    url("/images/cta-wiring-background-v2.webp") center/cover;
   color: #fff;
   padding: 70px 0;
 }
@@ -1547,7 +1547,7 @@ body {
 .conversion-banner {
   background:
     linear-gradient(90deg, rgba(17, 26, 58, 0.96), rgba(49, 61, 141, 0.88)),
-    url("/images/cta-wiring-background-v2.png") center/cover;
+    url("/images/cta-wiring-background-v2.webp") center/cover;
 }
 .project-feature {
   background: #313d8d;

@@ -11,6 +11,8 @@ export function Header() {
             alt="Perssons El"
             width={300}
             height={82}
+            sizes="(max-width: 360px) 125px, 188px"
+            quality={60}
             priority
           />
         </Link>
