@@ -10,6 +10,7 @@ export function Header() {
       <nav aria-label="Huvudnavigation">
         <Link href="/tjanster">Tjänster</Link><Link href="/projekt">Projekt</Link><Link href="/om-oss">Om oss</Link><Link href="/kontakt">Kontakt</Link>
       </nav>
+      <details className="mobile-menu"><summary aria-label="Öppna meny"><span aria-hidden="true" /></summary><div><Link href="/tjanster">Tjänster</Link><Link href="/projekt">Projekt</Link><Link href="/om-oss">Om oss</Link><Link href="/kontakt">Kontakt</Link></div></details>
       <a className="header-call" href="tel:+46768107050"><span className="header-call-icon" aria-hidden="true">☎</span><span><small>Ring oss direkt</small><strong>0768-107 050</strong></span></a>
     </div>
   </header>;
