@@ -1109,7 +1109,7 @@ select:focus-visible {
   text-transform: uppercase;
   white-space: nowrap;
 }
-.trust-track span + span:before {
+.trust-track span:before {
   content: "✦";
   margin-right: 20px;
   font-size: 1rem;
@@ -1241,7 +1241,7 @@ select:focus-visible {
     min-height: 48px;
     padding-inline: 12px;
     gap: 8px;
-    font-size: 0.72rem;
+    font-size: 0.84rem;
     white-space: nowrap;
   }
   .hero-reference .hero-visual {
@@ -1458,11 +1458,18 @@ select:focus-visible {
 }
 @media (max-width: 700px) {
   .conversion-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     width: 100%;
-    flex-direction: column;
+    gap: 8px;
   }
   .conversion-actions .button {
     width: 100%;
+    min-width: 0;
+    padding-inline: 8px;
+    gap: 6px;
+    font-size: 0.7rem;
+    white-space: nowrap;
   }
   .footer-bottom {
     align-items: flex-start;
@@ -2291,5 +2298,50 @@ body h3,
 @media (max-width: 700px) {
   .why-note {
     display: none;
+  }
+}
+
+/* Larger, centered trust items with a consistent leading star on mobile. */
+@media (max-width: 700px) {
+  .trust-track span {
+    padding: 16px 8px;
+    font-size: 0.84rem;
+    text-align: center;
+  }
+  .trust-track span:before {
+    margin-right: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Stronger mobile hero label and CTA typography. */
+@media (max-width: 700px) {
+  .hero-kicker {
+    padding: 7px 9px;
+    font-size: 0.76rem;
+  }
+  .hero-reference .button {
+    padding-inline: 8px;
+    gap: 6px;
+    font-size: 0.94rem;
+  }
+}
+
+/* Keep mobile trust markers aligned and the labels visually lighter. */
+@media (max-width: 700px) {
+  .trust-track span {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    justify-content: initial;
+    align-items: center;
+    padding-inline: 14px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .trust-track span:before {
+    width: 18px;
+    margin-right: 0;
+    text-align: left;
   }
 }
