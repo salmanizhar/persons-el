@@ -2722,9 +2722,9 @@ body h3,
 .footer-socials > span {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #46527e;
+  width: 30px;
+  height: 30px;
+  border: 0;
   color: #fff;
   transition:
     border-color 0.2s,
@@ -2733,16 +2733,16 @@ body h3,
 }
 .footer-socials > a:hover,
 .footer-socials > a:focus-visible {
-  border-color: var(--orange);
-  background: var(--orange);
-  color: #111a3a;
+  background: transparent;
+  color: var(--orange);
 }
 .footer-socials > span {
-  opacity: 0.55;
+  color: #fff;
+  opacity: 1;
 }
 .footer-socials svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
