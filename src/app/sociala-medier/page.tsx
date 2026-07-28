@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaqSection } from "@/components/faq-section";
 import { InstagramCarousel } from "@/components/instagram-carousel";
-import { FacebookIcon, InstagramIcon } from "@/components/icons";
+import { InstagramIcon } from "@/components/icons";
 import { faqContent } from "@/lib/faq";
 import { getInstagramPosts } from "@/lib/instagram";
 import { site } from "@/lib/site";
@@ -72,34 +72,6 @@ export default async function SocialMediaPage() {
         <InstagramCarousel posts={posts} />
       </section>
 
-      <section
-        className="section facebook-section"
-        aria-labelledby="facebook-title"
-      >
-        <div className="shell facebook-panel">
-          <div className="facebook-panel-icon">
-            <FacebookIcon />
-          </div>
-          <div>
-            <p className="eyebrow light">Facebook</p>
-            <h2 id="facebook-title">Följ Perssons El på Facebook.</h2>
-            <p>
-              Se uppdateringar från våra arbeten och håll kontakten med oss även
-              på Facebook.
-            </p>
-          </div>
-          {site.facebookUrl ? (
-            <a
-              className="button button-light"
-              href={site.facebookUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FacebookIcon /> Följ oss
-            </a>
-          ) : null}
-        </div>
-      </section>
       <section className="conversion-banner">
         <div className="shell">
           <div>
