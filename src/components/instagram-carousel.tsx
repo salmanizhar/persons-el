@@ -4,7 +4,17 @@ import Image from "next/image";
 import { useRef } from "react";
 import type { InstagramPost } from "@/lib/instagram";
 
-export function InstagramCarousel({ posts }: { posts: InstagramPost[] }) {
+type SocialCarouselProps = {
+  posts: InstagramPost[];
+  platform?: "Instagram" | "Facebook";
+  profileUrl?: string;
+};
+
+export function InstagramCarousel({
+  posts,
+  platform = "Instagram",
+  profileUrl,
+}: SocialCarouselProps) {
   const feedRef = useRef<HTMLUListElement>(null);
 
   function move(direction: -1 | 1) {
@@ -17,11 +27,11 @@ export function InstagramCarousel({ posts }: { posts: InstagramPost[] }) {
   }
 
   return (
-    <div className="shell social-carousel" aria-label="Instagram-inlägg">
+    <div className="shell social-carousel" aria-label={`${platform}-inlägg`}>
       <button
         className="social-carousel-arrow social-carousel-arrow-left"
         type="button"
-        aria-label="Visa föregående Instagram-inlägg"
+        aria-label={`Visa föregående ${platform}-inlägg`}
         onClick={() => move(-1)}
       >
         <svg aria-hidden="true" viewBox="0 0 24 24">
@@ -31,7 +41,11 @@ export function InstagramCarousel({ posts }: { posts: InstagramPost[] }) {
       <ul className="social-feed" ref={feedRef}>
         {posts.map((post) => (
           <li className="social-post" key={post.id}>
-            <a href={post.permalink} target="_blank" rel="noreferrer">
+            <a
+              href={profileUrl || post.permalink}
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="social-post-image">
                 <Image
                   src={post.imageUrl}
@@ -58,7 +72,7 @@ export function InstagramCarousel({ posts }: { posts: InstagramPost[] }) {
       <button
         className="social-carousel-arrow social-carousel-arrow-right"
         type="button"
-        aria-label="Visa nästa Instagram-inlägg"
+        aria-label={`Visa nästa ${platform}-inlägg`}
         onClick={() => move(1)}
       >
         <svg aria-hidden="true" viewBox="0 0 24 24">

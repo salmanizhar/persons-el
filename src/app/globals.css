@@ -2818,3 +2818,8 @@ body h3,
     white-space: normal;
   }
 }
+
+.facebook-feed-section {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
