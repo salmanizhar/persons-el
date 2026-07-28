@@ -135,11 +135,7 @@ export default async function Home() {
           <div className="section-heading compact">
             <div>
               <p className="eyebrow">Instagram &amp; Facebook</p>
-              <h2>
-                Jobb vi
-                <br />
-                delar.
-              </h2>
+              <h2>Jobb vi delar.</h2>
             </div>
             <Link className="text-link" href="/sociala-medier">
               Se alla inlägg <Arrow />
