@@ -1,19 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaqSection } from "@/components/faq-section";
-import { InstagramCarousel } from "@/components/instagram-carousel";
 import { Arrow } from "@/components/icons";
 import { QuoteSection } from "@/components/quote-section";
 import { faqContent } from "@/lib/faq";
 import { getFacebookPosts } from "@/lib/facebook";
 import { getInstagramPosts } from "@/lib/instagram";
-import { services, site } from "@/lib/site";
+import { services } from "@/lib/site";
 
 export default async function Home() {
   const [instagramPosts, facebookPosts] = await Promise.all([
     getInstagramPosts(),
     getFacebookPosts(),
   ]);
+  const featuredSocialPosts = [
+    { post: instagramPosts[0], platform: "Instagram" },
+    { post: facebookPosts[0], platform: "Facebook" },
+    { post: instagramPosts[1], platform: "Instagram" },
+  ];
   return (
     <>
       <section className="hero hero-reference">
@@ -126,33 +130,45 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="section projects-preview home-social-preview">
-        <div className="shell social-feed-heading">
-          <div>
-            <p className="eyebrow">Instagram</p>
-            <h2>Senaste från @perssons_el</h2>
+      <section className="section projects-preview">
+        <div className="shell">
+          <div className="section-heading compact">
+            <div>
+              <p className="eyebrow">Instagram &amp; Facebook</p>
+              <h2>
+                Jobb vi
+                <br />
+                delar.
+              </h2>
+            </div>
+            <Link className="text-link" href="/sociala-medier">
+              Se alla inlägg <Arrow />
+            </Link>
           </div>
-          <Link className="text-link" href="/sociala-medier">
-            Alla sociala inlägg <Arrow />
-          </Link>
-        </div>
-        <InstagramCarousel posts={instagramPosts} />
-
-        <div className="shell social-feed-heading home-facebook-heading">
-          <div>
-            <p className="eyebrow">Facebook</p>
-            <h2>Senaste från Perssons El</h2>
+          <div className="project-grid">
+            {featuredSocialPosts.map(({ post, platform }, index) => (
+              <a
+                className={`project-card project-${index + 1}`}
+                href={post.permalink}
+                key={`${platform}-${post.id}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="project-image">
+                  <Image
+                    src={post.imageUrl}
+                    alt={post.caption}
+                    fill
+                    sizes="(max-width: 700px) 100vw, 33vw"
+                    quality={60}
+                  />
+                </div>
+                <p className="project-label">{platform}</p>
+                <h3 className="social-project-caption">{post.caption}</h3>
+              </a>
+            ))}
           </div>
-          <a
-            className="text-link"
-            href={site.facebookUrl || "https://www.facebook.com/"}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Följ på Facebook <Arrow />
-          </a>
         </div>
-        <InstagramCarousel posts={facebookPosts} platform="Facebook" />
       </section>{" "}
       <QuoteSection />
       <FaqSection content={faqContent.home} />

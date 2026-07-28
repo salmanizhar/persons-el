@@ -2893,12 +2893,10 @@ body h3,
   color: #fff;
 }
 
-.home-social-preview {
-  display: grid;
-  gap: 42px;
-}
-.home-social-preview .home-facebook-heading {
-  margin-top: 44px;
-  padding-top: 72px;
-  border-top: 1px solid var(--line);
+.social-project-caption {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.35;
 }
