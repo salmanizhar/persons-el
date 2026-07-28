@@ -2747,3 +2747,71 @@ body h3,
   stroke: currentColor;
   stroke-width: 1.8;
 }
+
+/* FAQ readability refinement */
+.faq-section .faq-list {
+  border-top-color: rgba(255, 255, 255, 0.42);
+}
+.faq-section .faq-list details {
+  border-bottom-color: rgba(255, 255, 255, 0.42);
+}
+.faq-section .faq-list summary {
+  padding: 26px 52px 26px 4px;
+  color: #fff;
+  font-size: clamp(1.15rem, 1.35vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+.faq-section .faq-list summary::after {
+  top: 50%;
+  right: 6px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  font-size: 1.45rem;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+.faq-section .faq-list details p {
+  max-width: 64ch;
+  padding: 0 52px 28px 4px;
+  color: #f2f4fb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 1.15vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}
+
+@media (max-width: 700px) {
+  .faq-section .faq-list summary {
+    padding: 22px 44px 22px 2px;
+    font-size: 1.12rem;
+    line-height: 1.4;
+  }
+  .faq-section .faq-list summary::after {
+    right: 2px;
+    width: 28px;
+    height: 28px;
+  }
+  .faq-section .faq-list details p {
+    padding: 0 42px 24px 2px;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+}
+
+/* Keep the desktop service promises readable without changing mobile. */
+@media (min-width: 701px) {
+  .trust-track span {
+    padding: 18px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+    white-space: normal;
+  }
+}
