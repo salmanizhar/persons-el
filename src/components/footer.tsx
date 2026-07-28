@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FacebookIcon, InstagramIcon } from "@/components/icons";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -13,6 +14,30 @@ export function Footer() {
             Trygga elinstallationer för hem, fastigheter och företag i
             Helsingborg med omnejd.
           </p>
+          <div className="footer-socials" aria-label="Sociala medier">
+            <a
+              href={site.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Perssons El på Instagram"
+            >
+              <InstagramIcon />
+            </a>
+            {site.facebookUrl ? (
+              <a
+                href={site.facebookUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Perssons El på Facebook"
+              >
+                <FacebookIcon />
+              </a>
+            ) : (
+              <span aria-label="Facebook" role="img">
+                <FacebookIcon />
+              </span>
+            )}
+          </div>
         </div>
         <div>
           <p className="footer-label">Navigera</p>
@@ -20,12 +45,16 @@ export function Footer() {
           <Link href="/tjanster">Tjänster</Link>
           <Link href="/projekt">Projekt</Link>
           <Link href="/om-oss">Om oss</Link>
+          <Link href="/sociala-medier">Sociala medier</Link>
           <Link href="/kontakt">Kontakt</Link>
         </div>
         <div>
           <p className="footer-label">Kontakt</p>
           <a href={`tel:${site.phoneHref}`}>{site.phone}</a>
           <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href={site.instagramUrl} target="_blank" rel="noreferrer">
+            Instagram {site.instagramHandle}
+          </a>
           <p>Helsingborg med omnejd</p>
         </div>
         <div>

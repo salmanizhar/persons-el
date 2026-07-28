@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { FaqSection } from "@/components/faq-section";
 import { Arrow } from "@/components/icons";
 import { QuoteSection } from "@/components/quote-section";
+import { getServiceFaq } from "@/lib/faq";
 import { services } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -77,6 +79,7 @@ export default async function ServicePage({
         </div>
       </section>
       <QuoteSection />
+      <FaqSection content={getServiceFaq(s.title, s.slug)} />
     </>
   );
 }

@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { FaqSection } from "@/components/faq-section";
 import { QuoteSection } from "@/components/quote-section";
+import { faqContent } from "@/lib/faq";
 
 export default function AboutPage() {
   return (
@@ -63,6 +65,7 @@ export default function AboutPage() {
         </div>
       </section>
       <QuoteSection />
+      <FaqSection content={faqContent.about} />
     </>
   );
 }

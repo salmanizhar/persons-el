@@ -54,6 +54,7 @@ export default function RootLayout({
       addressCountry: "SE",
     },
     image: `${site.url}/opengraph-image`,
+    sameAs: [site.instagramUrl, site.facebookUrl].filter(Boolean),
   };
   return (
     <html lang="sv" className={barlow.variable}>

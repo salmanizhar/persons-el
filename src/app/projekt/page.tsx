@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { FaqSection } from "@/components/faq-section";
 import { QuoteSection } from "@/components/quote-section";
 import { projects } from "@/lib/site";
+import { faqContent } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Elprojekt i Helsingborg",
   description:
@@ -50,6 +52,7 @@ export default function ProjectsPage() {
         </div>
       </section>
       <QuoteSection />
+      <FaqSection content={faqContent.projects} />
     </>
   );
 }

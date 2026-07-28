@@ -8,6 +8,9 @@ export const site = {
   ),
   email: process.env.NEXT_PUBLIC_EMAIL || "info@personssel.se",
   city: "Helsingborg",
+  instagramHandle: "@perssons_el",
+  instagramUrl: "https://www.instagram.com/perssons_el/",
+  facebookUrl: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
 };
 
 export type Service = {

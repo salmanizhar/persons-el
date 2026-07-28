@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { FaqSection } from "@/components/faq-section";
 import { QuoteSection } from "@/components/quote-section";
+import { faqContent } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Kontakt och offert",
   description:
@@ -28,6 +30,7 @@ export default function ContactPage() {
         </div>
       </section>
       <QuoteSection />
+      <FaqSection content={faqContent.contact} />
     </>
   );
 }

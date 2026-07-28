@@ -1,4 +1,4 @@
-﻿import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import { services, site } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tjanster",
     "/projekt",
     "/om-oss",
+    "/sociala-medier",
     "/kontakt",
     "/integritetspolicy",
   ];

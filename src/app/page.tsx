@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaqSection } from "@/components/faq-section";
 import { Arrow } from "@/components/icons";
 import { QuoteSection } from "@/components/quote-section";
-import { projects, services, site } from "@/lib/site";
+import { faqContent } from "@/lib/faq";
+import { projects, services } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -154,59 +156,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section faq-section">
-        <div className="shell faq-grid">
-          <div>
-            <p className="eyebrow">Vanliga frågor</p>
-            <h2>Bra att veta innan vi börjar.</h2>
-            <p>
-              Här är svar på några av de vanligaste frågorna vi får inför ett
-              elarbete.
-            </p>
-          </div>
-          <div className="faq-list">
-            <details open>
-              <summary>Vilka typer av elarbeten hjälper ni till med?</summary>
-              <p>
-                Vi utför installationer, belysning, arbete med elcentraler,
-                felsökning och el vid renovering för både privatpersoner och
-                företag.
-              </p>
-            </details>
-            <details>
-              <summary>Arbetar ni utanför Helsingborg?</summary>
-              <p>
-                Ja, vi tar uppdrag i Helsingborg med omnejd. Kontakta oss med
-                adress och en kort beskrivning så återkommer vi med besked.
-              </p>
-            </details>
-            <details>
-              <summary>Hur får jag en offert?</summary>
-              <p>
-                Skicka din förfrågan via formuläret eller ring oss. Bilder och
-                en tydlig beskrivning hjälper oss att bedöma arbetet snabbare.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
       <QuoteSection />
-      <section className="conversion-banner">
-        <div className="shell">
-          <div>
-            <p className="eyebrow light">Redo att komma vidare?</p>
-            <h2>Trygg el börjar med ett tydligt samtal.</h2>
-          </div>
-          <div className="conversion-actions">
-            <a className="button" href="#offert">
-              Begär offert <Arrow />
-            </a>
-            <a className="button button-light" href={`tel:${site.phoneHref}`}>
-              Ring {site.phone}
-            </a>
-          </div>
-        </div>
-      </section>
+      <FaqSection content={faqContent.home} />
     </>
   );
 }

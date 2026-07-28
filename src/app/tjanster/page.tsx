@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow } from "@/components/icons";
+import { FaqSection } from "@/components/faq-section";
 import { QuoteSection } from "@/components/quote-section";
 import { services } from "@/lib/site";
+import { faqContent } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Eltjänster i Helsingborg",
@@ -56,6 +58,7 @@ export default function ServicesPage() {
         </div>
       </section>
       <QuoteSection />
+      <FaqSection content={faqContent.services} />
     </>
   );
 }

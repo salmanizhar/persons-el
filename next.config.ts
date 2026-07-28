@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   },
   images: {
     qualities: [40, 60, 75],
+    remotePatterns: [
+      { protocol: "https", hostname: "**.cdninstagram.com" },
+      { protocol: "https", hostname: "**.fbcdn.net" },
+    ],
   },
 };
 
