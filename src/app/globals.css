@@ -2987,23 +2987,6 @@ body h3,
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.privacy-review-note {
-  display: grid;
-  grid-template-columns: 170px minmax(0, 1fr);
-  gap: 24px;
-  margin-top: 36px;
-  padding: 26px 28px;
-  background: var(--orange);
-  color: var(--ink);
-}
-.privacy-review-note strong {
-  text-transform: uppercase;
-}
-.privacy-review-note p {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-}
 
 @media (max-width: 900px) {
   .privacy-layout {
@@ -3026,10 +3009,5 @@ body h3,
   }
   .privacy-articles article p {
     font-size: 1rem;
-  }
-  .privacy-review-note {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 22px;
   }
 }

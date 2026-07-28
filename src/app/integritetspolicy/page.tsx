@@ -84,13 +84,6 @@ export default function Privacy() {
                 </p>
               </div>
             </article>
-            <div className="privacy-review-note">
-              <strong>Före publicering</strong>
-              <p>
-                Texten ska granskas och kompletteras med företagets
-                organisationsuppgifter och faktiska lagringsrutiner.
-              </p>
-            </div>
           </div>
         </div>
       </section>
