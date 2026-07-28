@@ -1,12 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaqSection } from "@/components/faq-section";
+import { InstagramCarousel } from "@/components/instagram-carousel";
 import { Arrow } from "@/components/icons";
 import { QuoteSection } from "@/components/quote-section";
 import { faqContent } from "@/lib/faq";
-import { projects, services } from "@/lib/site";
+import { getFacebookPosts } from "@/lib/facebook";
+import { getInstagramPosts } from "@/lib/instagram";
+import { services, site } from "@/lib/site";
 
-export default function Home() {
+export default async function Home() {
+  const [instagramPosts, facebookPosts] = await Promise.all([
+    getInstagramPosts(),
+    getFacebookPosts(),
+  ]);
   return (
     <>
       <section className="hero hero-reference">
@@ -119,43 +126,34 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section projects-preview">
-        <div className="shell">
-          <div className="section-heading compact">
-            <div>
-              <p className="eyebrow">Utförda arbeten</p>
-              <h2>
-                Jobb vi är
-                <br />
-                stolta över.
-              </h2>
-            </div>
-            <Link className="text-link" href="/sociala-medier">
-              Följ våra arbeten <Arrow />
-            </Link>
+      <section className="section projects-preview home-social-preview">
+        <div className="shell social-feed-heading">
+          <div>
+            <p className="eyebrow">Instagram</p>
+            <h2>Senaste från @perssons_el</h2>
           </div>
-          <div className="project-grid">
-            {projects.slice(0, 3).map((project, i) => (
-              <article
-                className={`project-card project-${i + 1}`}
-                key={project.src}
-              >
-                <div className="project-image">
-                  <Image
-                    src={project.src}
-                    alt={project.alt}
-                    fill
-                    sizes="(max-width: 700px) 100vw, 33vw"
-                    quality={40}
-                  />
-                </div>
-                <p className="project-label">{project.label}</p>
-                <h3>{project.title}</h3>
-              </article>
-            ))}
-          </div>
+          <Link className="text-link" href="/sociala-medier">
+            Alla sociala inlägg <Arrow />
+          </Link>
         </div>
-      </section>
+        <InstagramCarousel posts={instagramPosts} />
+
+        <div className="shell social-feed-heading home-facebook-heading">
+          <div>
+            <p className="eyebrow">Facebook</p>
+            <h2>Senaste från Perssons El</h2>
+          </div>
+          <a
+            className="text-link"
+            href={site.facebookUrl || "https://www.facebook.com/"}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Följ på Facebook <Arrow />
+          </a>
+        </div>
+        <InstagramCarousel posts={facebookPosts} platform="Facebook" />
+      </section>{" "}
       <QuoteSection />
       <FaqSection content={faqContent.home} />
     </>

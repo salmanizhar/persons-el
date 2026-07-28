@@ -27,7 +27,10 @@ export function InstagramCarousel({
   }
 
   return (
-    <div className="shell social-carousel" aria-label={`${platform}-inlägg`}>
+    <div
+      className={`shell social-carousel social-carousel-${platform.toLowerCase()}`}
+      aria-label={`${platform}-inlägg`}
+    >
       <button
         className="social-carousel-arrow social-carousel-arrow-left"
         type="button"

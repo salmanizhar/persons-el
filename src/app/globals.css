@@ -2823,3 +2823,82 @@ body h3,
   background: var(--paper);
   border-top: 1px solid var(--line);
 }
+
+/* Platform character without losing the Perssons EL layout language. */
+.instagram-feed-section {
+  background:
+    radial-gradient(circle at 88% 8%, rgba(253, 29, 29, 0.08), transparent 25%),
+    linear-gradient(180deg, #fff 0%, #fff8fb 100%);
+}
+.facebook-feed-section {
+  background:
+    radial-gradient(
+      circle at 10% 12%,
+      rgba(24, 119, 242, 0.1),
+      transparent 28%
+    ),
+    #f4f8ff;
+}
+.instagram-feed-section .eyebrow {
+  color: #b52375;
+}
+.facebook-feed-section .eyebrow {
+  color: #1877f2;
+}
+.instagram-follow-button {
+  background: linear-gradient(110deg, #833ab4, #e1306c 52%, #f77737);
+  color: #fff;
+}
+.instagram-follow-button:hover {
+  background: linear-gradient(110deg, #6d2c98, #c9245d 52%, #e96427);
+}
+.facebook-follow-button {
+  background: #1877f2;
+  color: #fff;
+}
+.facebook-follow-button:hover {
+  background: #0f63d2;
+}
+.social-carousel-instagram .social-post,
+.social-carousel-facebook .social-post {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.social-carousel-instagram .social-post::before,
+.social-carousel-facebook .social-post::before {
+  content: none;
+}
+.social-carousel-instagram .social-post-copy {
+  border-top: 5px solid;
+  border-image: linear-gradient(90deg, #833ab4, #e1306c, #f77737, #fcaf45) 1;
+}
+.social-carousel-facebook .social-post-copy {
+  border-top: 5px solid #1877f2;
+}
+.social-carousel-instagram .social-carousel-arrow {
+  border-color: #c13584;
+  color: #c13584;
+}
+.social-carousel-facebook .social-carousel-arrow {
+  border-color: #1877f2;
+  color: #1877f2;
+}
+.social-carousel-instagram .social-carousel-arrow:hover {
+  background: #c13584;
+  color: #fff;
+}
+.social-carousel-facebook .social-carousel-arrow:hover {
+  background: #1877f2;
+  color: #fff;
+}
+
+.home-social-preview {
+  display: grid;
+  gap: 42px;
+}
+.home-social-preview .home-facebook-heading {
+  margin-top: 44px;
+  padding-top: 72px;
+  border-top: 1px solid var(--line);
+}

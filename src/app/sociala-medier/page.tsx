@@ -5,6 +5,7 @@ import { FaqSection } from "@/components/faq-section";
 import { InstagramCarousel } from "@/components/instagram-carousel";
 import { FacebookIcon, InstagramIcon } from "@/components/icons";
 import { faqContent } from "@/lib/faq";
+import { getFacebookPosts } from "@/lib/facebook";
 import { getInstagramPosts } from "@/lib/instagram";
 import { site } from "@/lib/site";
 
@@ -24,7 +25,10 @@ export const metadata: Metadata = {
 const instagramUrl = "https://www.instagram.com/perssons_el/";
 
 export default async function SocialMediaPage() {
-  const posts = await getInstagramPosts();
+  const [instagramPosts, facebookPosts] = await Promise.all([
+    getInstagramPosts(),
+    getFacebookPosts(),
+  ]);
 
   return (
     <>
@@ -49,7 +53,7 @@ export default async function SocialMediaPage() {
       </section>
 
       <section
-        className="section social-feed-section"
+        className="section social-feed-section instagram-feed-section"
         aria-labelledby="instagram-title"
       >
         <div className="shell social-feed-heading">
@@ -58,7 +62,7 @@ export default async function SocialMediaPage() {
             <h2 id="instagram-title">Senaste från @perssons_el</h2>
           </div>
           <a
-            className="button social-instagram-button"
+            className="button social-instagram-button instagram-follow-button"
             href={instagramUrl}
             target="_blank"
             rel="noreferrer"
@@ -69,7 +73,7 @@ export default async function SocialMediaPage() {
           </a>
         </div>
 
-        <InstagramCarousel posts={posts} />
+        <InstagramCarousel posts={instagramPosts} />
       </section>
 
       <section
@@ -82,7 +86,7 @@ export default async function SocialMediaPage() {
             <h2 id="facebook-title">Senaste från Perssons El</h2>
           </div>
           <a
-            className="button social-instagram-button"
+            className="button social-instagram-button facebook-follow-button"
             href={site.facebookUrl || "https://www.facebook.com/"}
             target="_blank"
             rel="noreferrer"
@@ -94,7 +98,7 @@ export default async function SocialMediaPage() {
         </div>
 
         <InstagramCarousel
-          posts={posts}
+          posts={facebookPosts}
           platform="Facebook"
           profileUrl={site.facebookUrl || "https://www.facebook.com/"}
         />
