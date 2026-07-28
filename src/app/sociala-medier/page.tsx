@@ -3,18 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaqSection } from "@/components/faq-section";
 import { InstagramCarousel } from "@/components/instagram-carousel";
-import { InstagramIcon } from "@/components/icons";
+import { FacebookIcon, InstagramIcon } from "@/components/icons";
 import { faqContent } from "@/lib/faq";
 import { getInstagramPosts } from "@/lib/instagram";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Instagram och sociala medier",
+  title: "Instagram och Facebook",
   description:
-    "Följ Perssons El på Instagram och se aktuella elinstallationer, belysningsprojekt och arbete från Helsingborg med omnejd.",
+    "Följ Perssons El på Instagram och Facebook och se aktuella elinstallationer och arbete från Helsingborg med omnejd.",
   alternates: { canonical: "/sociala-medier" },
   openGraph: {
-    title: "Följ Perssons El på Instagram",
+    title: "Följ Perssons El på Instagram och Facebook",
     description:
       "Se aktuella projekt, elinstallationer och arbete bakom kulisserna hos Perssons El.",
     url: "/sociala-medier",
@@ -42,8 +42,8 @@ export default async function SocialMediaPage() {
           <p className="eyebrow light">Sociala medier</p>
           <h1>Följ jobbet bakom resultatet.</h1>
           <p>
-            På Instagram delar vi installationer, pågående arbeten och detaljer
-            från vardagen som elektriker i Helsingborg.
+            På Instagram och Facebook delar vi installationer, pågående arbeten
+            och detaljer från vardagen som elektriker i Helsingborg.
           </p>
         </div>
       </section>
@@ -72,6 +72,34 @@ export default async function SocialMediaPage() {
         <InstagramCarousel posts={posts} />
       </section>
 
+      <section
+        className="section facebook-section"
+        aria-labelledby="facebook-title"
+      >
+        <div className="shell facebook-panel">
+          <div className="facebook-panel-icon">
+            <FacebookIcon />
+          </div>
+          <div>
+            <p className="eyebrow light">Facebook</p>
+            <h2 id="facebook-title">Följ Perssons El på Facebook.</h2>
+            <p>
+              Se uppdateringar från våra arbeten och håll kontakten med oss även
+              på Facebook.
+            </p>
+          </div>
+          {site.facebookUrl ? (
+            <a
+              className="button button-light"
+              href={site.facebookUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FacebookIcon /> Följ oss
+            </a>
+          ) : null}
+        </div>
+      </section>
       <section className="conversion-banner">
         <div className="shell">
           <div>

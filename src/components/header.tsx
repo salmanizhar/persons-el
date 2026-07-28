@@ -18,9 +18,8 @@ export function Header() {
         </Link>
         <nav aria-label="Huvudnavigation">
           <Link href="/tjanster">Tjänster</Link>
-          <Link href="/projekt">Projekt</Link>
-          <Link href="/om-oss">Om oss</Link>
           <Link href="/sociala-medier">Sociala medier</Link>
+          <Link href="/om-oss">Om oss</Link>
           <Link href="/kontakt">Kontakt</Link>
         </nav>
         <details className="mobile-menu">
@@ -29,9 +28,8 @@ export function Header() {
           </summary>
           <div>
             <Link href="/tjanster">Tjänster</Link>
-            <Link href="/projekt">Projekt</Link>
-            <Link href="/om-oss">Om oss</Link>
             <Link href="/sociala-medier">Sociala medier</Link>
+            <Link href="/om-oss">Om oss</Link>
             <Link href="/kontakt">Kontakt</Link>
           </div>
         </details>

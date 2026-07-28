@@ -43,9 +43,8 @@ export function Footer() {
           <p className="footer-label">Navigera</p>
           <Link href="/">Startsida</Link>
           <Link href="/tjanster">Tjänster</Link>
-          <Link href="/projekt">Projekt</Link>
-          <Link href="/om-oss">Om oss</Link>
           <Link href="/sociala-medier">Sociala medier</Link>
+          <Link href="/om-oss">Om oss</Link>
           <Link href="/kontakt">Kontakt</Link>
         </div>
         <div>

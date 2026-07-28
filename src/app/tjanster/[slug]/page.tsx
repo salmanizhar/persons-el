@@ -72,8 +72,8 @@ export default async function ServicePage({
               Varje uppdrag börjar med att vi går igenom förutsättningarna.
               Därefter får du ett tydligt förslag på hur arbetet kan genomföras.
             </p>
-            <Link className="text-link" href="/projekt">
-              Se utförda arbeten <Arrow />
+            <Link className="text-link" href="/sociala-medier">
+              Följ våra arbeten <Arrow />
             </Link>
           </div>
         </div>

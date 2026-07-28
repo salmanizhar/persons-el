@@ -4,7 +4,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/tjanster",
-    "/projekt",
     "/om-oss",
     "/sociala-medier",
     "/kontakt",

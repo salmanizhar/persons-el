@@ -51,23 +51,6 @@ export const faqContent = {
       },
     ],
   },
-  projects: {
-    title: "Frågor om våra projekt.",
-    intro: "Så arbetar vi från första genomgång till färdig installation.",
-    items: [
-      {
-        question: "Vilka projekt visar ni på webbplatsen?",
-        answer:
-          "Vi visar exempel på bland annat belysning, elcentraler, kabeldragning, renovering och installationer för företag.",
-      },
-      {
-        question: "Kan ni göra en liknande lösning hos mig?",
-        answer:
-          "Ja, men varje installation anpassas efter platsen, den befintliga elanläggningen och dina behov. Kontakta oss så går vi igenom förutsättningarna.",
-      },
-      commonItems[2],
-    ],
-  },
   about: {
     title: "Frågor om Perssons El.",
     intro: "Kort om vilka vi hjälper och hur vi arbetar.",
@@ -119,6 +102,11 @@ export const faqContent = {
       {
         question: "Vilket är Perssons Els Instagramkonto?",
         answer: "Du hittar oss på Instagram under användarnamnet @perssons_el.",
+      },
+      {
+        question: "Finns Perssons El på Facebook?",
+        answer:
+          "Ja, på Facebook delar vi uppdateringar från våra arbeten och information om verksamheten.",
       },
       {
         question: "Kan jag begära offert på en lösning jag sett?",

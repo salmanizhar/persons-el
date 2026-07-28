@@ -130,8 +130,8 @@ export default function Home() {
                 stolta över.
               </h2>
             </div>
-            <Link className="text-link" href="/projekt">
-              Alla projekt <Arrow />
+            <Link className="text-link" href="/sociala-medier">
+              Följ våra arbeten <Arrow />
             </Link>
           </div>
           <div className="project-grid">
