@@ -52,9 +52,6 @@ export function Footer() {
           <p className="footer-label">Kontakt</p>
           <a href={`tel:${site.phoneHref}`}>{site.phone}</a>
           <a href={`mailto:${site.email}`}>{site.email}</a>
-          <a href={site.instagramUrl} target="_blank" rel="noreferrer">
-            Instagram {site.instagramHandle}
-          </a>
           <p>Helsingborg med omnejd</p>
         </div>
         <div>
