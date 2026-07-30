@@ -50,7 +50,8 @@ export default async function ServicePage({
               src={s.image}
               alt={s.alt}
               fill
-              priority
+              preload
+              fetchPriority="high"
               sizes="(max-width:800px) 100vw, 48vw"
             />
           </div>

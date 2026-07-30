@@ -12,7 +12,8 @@ export default function AboutPage() {
           src="/images/hero-about-perssons-el.png"
           alt="Elektriker i en välorganiserad professionell verkstad"
           fill
-          priority
+          preload
+          fetchPriority="high"
           sizes="100vw"
         />
         <div className="shell image-overlay-hero-content">

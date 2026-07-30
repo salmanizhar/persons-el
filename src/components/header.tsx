@@ -13,7 +13,6 @@ export function Header() {
             height={82}
             sizes="(max-width: 360px) 125px, 188px"
             quality={40}
-            priority
           />
         </Link>
         <nav aria-label="Huvudnavigation">
