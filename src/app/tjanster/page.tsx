@@ -22,7 +22,7 @@ export default function ServicesPage() {
           src="/images/hero-services-overview.png"
           alt="Elektriker som genomför en säkerhetskontroll av en modern elcentral"
           fill
-          priority
+          preload
           sizes="100vw"
         />
         <div className="shell image-overlay-hero-content">
