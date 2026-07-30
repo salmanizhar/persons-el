@@ -18,7 +18,8 @@ export default function ContactPage() {
           src="/images/hero-contact-electrician.png"
           alt="Elektriker som går igenom ett kommande arbete med en kund"
           fill
-          priority
+          preload
+          fetchPriority="high"
           sizes="100vw"
         />
         <div className="shell image-overlay-hero-content">
