@@ -6,6 +6,9 @@ import { FaqSection } from "@/components/faq-section";
 import { Arrow } from "@/components/icons";
 import { QuoteSection } from "@/components/quote-section";
 import { getServiceFaq } from "@/lib/faq";
+import { createPageMetadata } from "@/lib/metadata";
+import { seoCopy } from "@/lib/seo-content";
+import { serviceDetails } from "@/lib/service-details";
 import { services } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -19,11 +22,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const s = services.find((x) => x.slug === slug);
   if (!s) return {};
-  return {
+  return createPageMetadata({
     title: `${s.title} i Helsingborg`,
     description: s.intro,
-    alternates: { canonical: `/tjanster/${slug}` },
-  };
+    path: `/tjanster/${slug}`,
+  });
 }
 export default async function ServicePage({
   params,
@@ -39,7 +42,7 @@ export default async function ServicePage({
         <div className="shell service-hero-grid">
           <div>
             <p className="eyebrow">Tjänster · Helsingborg</p>
-            <h1>{s.title}</h1>
+            <h1>{s.title} i Helsingborg</h1>
             <p className="lead">{s.intro}</p>
             <a className="button" href="#offert">
               Beskriv ditt jobb <Arrow />
@@ -73,6 +76,10 @@ export default async function ServicePage({
               Varje uppdrag börjar med att vi går igenom förutsättningarna.
               Därefter får du ett tydligt förslag på hur arbetet kan genomföras.
             </p>
+            <p>{serviceDetails[s.slug]}</p>
+            <Link className="text-link" href="/tjanster">
+              {seoCopy.allServicesLink} <Arrow />
+            </Link>
             <Link className="text-link" href="/sociala-medier">
               Följ våra arbeten <Arrow />
             </Link>

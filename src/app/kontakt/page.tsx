@@ -3,12 +3,8 @@ import Image from "next/image";
 import { FaqSection } from "@/components/faq-section";
 import { QuoteSection } from "@/components/quote-section";
 import { faqContent } from "@/lib/faq";
-export const metadata: Metadata = {
-  title: "Kontakt och offert",
-  description:
-    "Kontakta Perssons El för elarbete i Helsingborg. Ring, mejla eller skicka en offertförfrågan.",
-  alternates: { canonical: "/kontakt" },
-};
+import { seoPageMetadata } from "@/lib/seo-content";
+export const metadata: Metadata = seoPageMetadata.contact;
 export default function ContactPage() {
   return (
     <>

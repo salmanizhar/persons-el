@@ -7,20 +7,10 @@ import { FacebookIcon, InstagramIcon } from "@/components/icons";
 import { faqContent } from "@/lib/faq";
 import { getFacebookPosts } from "@/lib/facebook";
 import { getInstagramPosts } from "@/lib/instagram";
+import { seoPageMetadata } from "@/lib/seo-content";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Instagram och Facebook",
-  description:
-    "Följ Perssons El på Instagram och Facebook och se aktuella elinstallationer och arbete från Helsingborg med omnejd.",
-  alternates: { canonical: "/sociala-medier" },
-  openGraph: {
-    title: "Följ Perssons El på Instagram och Facebook",
-    description:
-      "Se aktuella projekt, elinstallationer och arbete bakom kulisserna hos Perssons El.",
-    url: "/sociala-medier",
-  },
-};
+export const metadata: Metadata = seoPageMetadata.social;
 
 const instagramUrl = "https://www.instagram.com/perssons_el/";
 

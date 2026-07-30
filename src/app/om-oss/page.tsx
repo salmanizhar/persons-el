@@ -1,7 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { FaqSection } from "@/components/faq-section";
 import { QuoteSection } from "@/components/quote-section";
 import { faqContent } from "@/lib/faq";
+import { seoPageMetadata } from "@/lib/seo-content";
+
+export const metadata: Metadata = seoPageMetadata.about;
 
 export default function AboutPage() {
   return (
@@ -17,7 +21,7 @@ export default function AboutPage() {
           sizes="100vw"
         />
         <div className="shell image-overlay-hero-content">
-          <h1>Yrkesstolthet i varje anslutning.</h1>
+          <h1>Din lokala elektriker i Helsingborg.</h1>
           <p>
             Vi tror på tydlig kommunikation, ordning i arbetet och lösningar som
             fungerar långt efter att verktygslådan är stängd.

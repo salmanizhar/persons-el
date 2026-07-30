@@ -6,6 +6,7 @@ import { QuoteSection } from "@/components/quote-section";
 import { faqContent } from "@/lib/faq";
 import { getFacebookPosts } from "@/lib/facebook";
 import { getInstagramPosts } from "@/lib/instagram";
+import { homeSeoCopy } from "@/lib/home-seo-copy";
 import { services } from "@/lib/site";
 
 export default async function Home() {
@@ -24,16 +25,12 @@ export default async function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <h1>
-              <span className="hero-title-line">Smartare el.</span>
+              <span className="hero-title-line">Elektriker i Helsingborg.</span>
               <span className="hero-title-line hero-title-accent">
-                Tryggare vardag.
+                Smartare el. Tryggare vardag.
               </span>
             </h1>
-            <p className="lead">
-              Säkra och genomtänkta elinstallationer för hem, fastigheter och
-              företag. Tydliga besked, noggrant utfört och rätt kopplat från
-              början.
-            </p>
+            <p className="lead">{homeSeoCopy.lead}</p>
             <div className="hero-actions">
               <a className="button" href="#offert">
                 Boka elektriker <Arrow />

@@ -3,14 +3,9 @@ import Image from "next/image";
 import { FaqSection } from "@/components/faq-section";
 import { faqContent } from "@/lib/faq";
 import { site } from "@/lib/site";
+import { seoPageMetadata } from "@/lib/seo-content";
 
-export const metadata: Metadata = {
-  title: "Integritetspolicy",
-  description:
-    "Så hanterar Perssons El personuppgifter som skickas via webbplatsen.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "/integritetspolicy" },
-};
+export const metadata: Metadata = seoPageMetadata.privacy;
 
 export default function Privacy() {
   return (

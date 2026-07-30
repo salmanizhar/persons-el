@@ -6,13 +6,9 @@ import { FaqSection } from "@/components/faq-section";
 import { QuoteSection } from "@/components/quote-section";
 import { services } from "@/lib/site";
 import { faqContent } from "@/lib/faq";
+import { seoPageMetadata } from "@/lib/seo-content";
 
-export const metadata: Metadata = {
-  title: "Eltjänster i Helsingborg",
-  description:
-    "Elinstallation, belysning, elcentraler och felsökning för hem och företag i Helsingborg.",
-  alternates: { canonical: "/tjanster" },
-};
+export const metadata: Metadata = seoPageMetadata.services;
 export default function ServicesPage() {
   return (
     <>
