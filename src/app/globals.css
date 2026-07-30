@@ -649,7 +649,7 @@ select:focus-visible {
 }
 .values strong {
   font-family: var(--font-mono);
-  color: var(--orange);
+  color: var(--blue);
 }
 .contact-lines {
   margin-top: 55px;

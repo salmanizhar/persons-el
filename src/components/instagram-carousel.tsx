@@ -55,7 +55,7 @@ export function InstagramCarousel({
                   alt={post.caption}
                   fill
                   sizes="(max-width: 700px) 82vw, 360px"
-                  quality={60}
+                  quality={40}
                 />
               </div>
               <div className="social-post-copy">
