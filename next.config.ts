@@ -9,7 +9,8 @@ const nextConfig: NextConfig = {
   },
   images: {
     deviceSizes: [360, 480, 560, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    qualities: [40, 60, 75],
+    formats: ["image/avif", "image/webp"],
+    qualities: [30, 40, 60, 75],
     remotePatterns: [
       { protocol: "https", hostname: "**.cdninstagram.com" },
       { protocol: "https", hostname: "**.fbcdn.net" },
