@@ -23,6 +23,7 @@ export default function ServicesPage() {
           alt="Elektriker som genomför en säkerhetskontroll av en modern elcentral"
           fill
           preload
+          fetchPriority="high"
           sizes="100vw"
         />
         <div className="shell image-overlay-hero-content">
