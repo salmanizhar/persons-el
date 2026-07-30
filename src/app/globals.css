@@ -1775,7 +1775,7 @@ body {
 /* Balanced desktop hero proportions */
 @media (min-width: 901px) {
   .hero-reference .hero-grid {
-    grid-template-columns: 1fr 1.08fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 52px;
     min-height: 560px;
     align-items: start;
@@ -1818,12 +1818,17 @@ body {
   color: var(--ink);
 }
 @media (min-width: 901px) {
+  .hero-reference .hero-copy {
+    min-width: 0;
+  }
   .hero-title-line {
-    white-space: nowrap;
+    white-space: normal;
   }
   .hero-reference h1 {
-    font-size: clamp(3.8rem, 4.4vw, 4.75rem);
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(3.1rem, 3.45vw, 3.75rem);
+    overflow-wrap: normal;
   }
 }
 @media (max-width: 900px) {

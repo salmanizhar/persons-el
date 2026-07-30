@@ -27,7 +27,7 @@ export default async function Home() {
             <h1>
               <span className="hero-title-line">Elektriker i Helsingborg.</span>
               <span className="hero-title-line hero-title-accent">
-                Smartare el. Tryggare vardag.
+                Trygg el. Rätt gjort.
               </span>
             </h1>
             <p className="lead">{homeSeoCopy.lead}</p>

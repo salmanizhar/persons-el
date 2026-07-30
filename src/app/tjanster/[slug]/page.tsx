@@ -80,9 +80,6 @@ export default async function ServicePage({
             <Link className="text-link" href="/tjanster">
               {seoCopy.allServicesLink} <Arrow />
             </Link>
-            <Link className="text-link" href="/sociala-medier">
-              Följ våra arbeten <Arrow />
-            </Link>
           </div>
         </div>
       </section>
