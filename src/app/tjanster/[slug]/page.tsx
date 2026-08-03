@@ -23,7 +23,7 @@ export async function generateMetadata({
   const s = services.find((x) => x.slug === slug);
   if (!s) return {};
   return createPageMetadata({
-    title: `${s.title} i Helsingborg`,
+    title: `${s.title} i ${s.area}`,
     description: s.intro,
     path: `/tjanster/${slug}`,
   });
@@ -41,8 +41,10 @@ export default async function ServicePage({
       <section className="service-hero">
         <div className="shell service-hero-grid">
           <div>
-            <p className="eyebrow">Tjänster · Helsingborg</p>
-            <h1>{s.title} i Helsingborg</h1>
+            <p className="eyebrow">Tjänster · {s.area}</p>
+            <h1>
+              {s.title} i {s.area}
+            </h1>
             <p className="lead">{s.intro}</p>
             <a className="button" href="#offert">
               Beskriv ditt jobb <Arrow />

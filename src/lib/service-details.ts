@@ -4,7 +4,7 @@ export const serviceDetails: Record<string, string> = {
   belysning:
     "Rätt belysning ska ge både funktion och trivsel. Vi hjälper till att välja placering, ljusstyrka och styrning för inom- och utomhusmiljöer i Helsingborg, från trädgård och fasad till garage och arbetsplats.",
   elcentraler:
-    "Vi går igenom den befintliga centralen, bedömer kapacitet och märkning och föreslår lämpliga åtgärder. Målet är en tydlig och driftsäker elcentral som gör framtida kontroll och underhåll enklare.",
+    "Vi går igenom elanläggningens kapacitet och förutsättningar för elcentral eller laddbox och föreslår en säker, tydlig lösning. Installationen utförs med rätt skydd, märkning och dokumentation för enkel framtida kontroll och användning.",
   "felsokning-renovering":
     "Vid renovering och återkommande elfel kartlägger vi anläggningen metodiskt innan åtgärder påbörjas. Du får en tydlig förklaring av problemet och ett förslag som tar hänsyn till både dagens behov och framtida användning.",
 };

@@ -43,7 +43,7 @@ export function QuoteForm() {
         <select id="service" name="service">
           <option>Elinstallation</option>
           <option>Belysning</option>
-          <option>Elcentral</option>
+          <option>Elcentral eller laddbox</option>
           <option>Felsökning och renovering</option>
           <option>Annat elarbete</option>
         </select>

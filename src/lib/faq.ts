@@ -174,6 +174,11 @@ const serviceFaqs: Record<string, FaqItem[]> = {
       answer:
         "Ja, vi kan kontrollera elcentralen och hjälpa till med jordfelsbrytare, säkringar, komplettering och dokumentation.",
     },
+    {
+      question: "Installerar ni laddboxar för elbil?",
+      answer:
+        "Ja, vi hjälper till att bedöma elanläggningens kapacitet och installerar laddbox med rätt skydd, inkoppling och dokumentation.",
+    },
   ],
   "felsokning-renovering": [
     {

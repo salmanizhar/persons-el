@@ -32,8 +32,8 @@ export default function AboutPage() {
         <div className="shell about-grid">
           <div className="about-image">
             <Image
-              src="/images/about-perssons-el-v2.png"
-              alt="Professionell elektriker i en välorganiserad verkstad"
+              src="/images/about-team-vehicles.jpg"
+              alt="Teamet på Perssons El framför företagets servicebilar"
               fill
               sizes="(max-width:800px) 100vw, 48vw"
             />

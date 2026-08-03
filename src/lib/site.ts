@@ -16,6 +16,7 @@ export const site = {
 export type Service = {
   slug: string;
   title: string;
+  area: string;
   short: string;
   intro: string;
   image: string;
@@ -27,11 +28,12 @@ export const services: Service[] = [
   {
     slug: "elinstallation",
     title: "Elinstallation",
+    area: "nordvästra Skåne",
     short: "Säkra installationer för hem, företag och renoveringar.",
     intro:
-      "Vi hjälper dig med genomtänkta elinstallationer i Helsingborg – från nya uttag och dragningar till kompletta lösningar vid ombyggnad.",
-    image: "/images/service-elinstallation-v2.png",
-    alt: "Kabeldragning vid elinstallation under renovering",
+      "Vi hjälper dig med genomtänkta elinstallationer i nordvästra Skåne – från nya uttag och dragningar till kompletta lösningar vid ombyggnad.",
+    image: "/images/service-poolcentral.jpg",
+    alt: "Elinstallation med poolcentral och tydlig kabeldragning",
     bullets: [
       "Nya uttag och strömbrytare",
       "Kabeldragning och ombyggnad",
@@ -41,6 +43,7 @@ export const services: Service[] = [
   {
     slug: "belysning",
     title: "Belysning",
+    area: "Helsingborg",
     short: "Ljus som fungerar ute, inne och i arbetsmiljöer.",
     intro:
       "Vi planerar och installerar belysning med rätt funktion, placering och uttryck – för trädgård, bostad, garage och verksamhet.",
@@ -54,21 +57,23 @@ export const services: Service[] = [
   },
   {
     slug: "elcentraler",
-    title: "Elcentraler",
-    short: "Ordning, kapacitet och tryggare eldistribution.",
+    title: "Elcentraler och laddboxar",
+    area: "Helsingborg",
+    short: "Trygg eldistribution och smidig laddning hemma.",
     intro:
-      "En modern och tydligt märkt elcentral gör elanläggningen säkrare och enklare att underhålla. Vi hjälper till med kontroll, komplettering och byte.",
-    image: "/images/panel-detail-v2.png",
-    alt: "Professionellt installerad elcentral med säkringar",
+      "Vi hjälper dig med moderna, tydligt märkta elcentraler och säkra laddboxar – från kontroll och uppgradering till komplett installation.",
+    image: "/images/service-elcentral-marked.jpg",
+    alt: "Elcentral med tydligt märkta kablar och säkringar",
     bullets: [
       "Byte och uppgradering av elcentral",
-      "Jordfelsbrytare och säkringar",
-      "Felsökning och dokumentation",
+      "Installation av laddbox för elbil",
+      "Jordfelsbrytare, säkringar och dokumentation",
     ],
   },
   {
     slug: "felsokning-renovering",
     title: "Felsökning och renovering",
+    area: "Helsingborg",
     short: "Vi hittar felet och bygger rätt från början.",
     intro:
       "Vid renovering eller återkommande elproblem behövs ett metodiskt arbete. Vi undersöker anläggningen och föreslår en tydlig väg framåt.",
