@@ -46,10 +46,11 @@ export default async function Home() {
           >
             <div className="hero-photo hero-photo-main">
               <Image
-                src="/images/hero-home-electrician-v3.png"
+                src="/images/hero-home-electrician-v3-lcp.webp"
                 alt="Elektriker som kontrollerar en modern elcentral i ett svenskt hem"
                 fill
-                sizes="(max-width: 900px) 100vw, 50vw"
+                sizes="(max-width: 700px) calc(100vw - 16px), (max-width: 900px) calc(100vw - 48px), 560px"
+                quality={60}
                 preload
                 fetchPriority="high"
               />

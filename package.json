@@ -8,6 +8,21 @@
     "start": "next start",
     "lint": "eslint ."
   },
+  "browserslist": {
+    "production": [
+      "Chrome >= 120",
+      "Edge >= 120",
+      "Firefox >= 121",
+      "Safari >= 17.4",
+      "iOS >= 17.4",
+      "Android >= 120"
+    ],
+    "development": [
+      "last 1 Chrome version",
+      "last 1 Firefox version",
+      "last 1 Safari version"
+    ]
+  },
   "dependencies": {
     "next": "latest",
     "react": "latest",
