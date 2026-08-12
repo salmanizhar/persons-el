@@ -62,7 +62,7 @@ export const services: Service[] = [
     short: "Trygg eldistribution och smidig laddning hemma.",
     intro:
       "Vi hjälper dig med moderna, tydligt märkta elcentraler och säkra laddboxar – från kontroll och uppgradering till komplett installation.",
-    image: "/images/service-elcentral-marked.jpg",
+    image: "/images/service-elcentral-marked-900.webp",
     alt: "Elcentral med tydligt märkta kablar och säkringar",
     bullets: [
       "Byte och uppgradering av elcentral",

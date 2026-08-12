@@ -42,7 +42,6 @@ export default async function SeoLandingPage({
     .filter((relatedPage): relatedPage is NonNullable<typeof relatedPage> =>
       Boolean(relatedPage),
     );
-
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [

@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className="shell about-grid">
           <div className="about-image">
             <Image
-              src="/images/about-team-vehicles.jpg"
+              src="/images/about-team-vehicles-1200.webp"
               alt="Teamet på Perssons El framför företagets servicebilar"
               fill
               sizes="(max-width:800px) 100vw, 48vw"
