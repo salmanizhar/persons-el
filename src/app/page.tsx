@@ -50,9 +50,9 @@ export default async function Home() {
                 alt="Elektriker som kontrollerar en modern elcentral i ett svenskt hem"
                 fill
                 sizes="(max-width: 700px) calc(100vw - 16px), (max-width: 900px) calc(100vw - 48px), 560px"
-                quality={60}
                 preload
                 fetchPriority="high"
+                unoptimized
               />
             </div>
           </div>
