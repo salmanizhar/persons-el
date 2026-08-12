@@ -58,7 +58,7 @@ export async function getInstagramPosts(): Promise<InstagramPost[]> {
   if (!token || !userId) return fallbackPosts;
 
   const version = process.env.INSTAGRAM_GRAPH_VERSION || "v23.0";
-  const url = new URL(`https://graph.instagram.com/${version}/${userId}/media`);
+  const url = new URL(`https://graph.facebook.com/${version}/${userId}/media`);
   url.searchParams.set(
     "fields",
     "id,caption,media_type,media_url,thumbnail_url,permalink,timestamp",
@@ -67,7 +67,7 @@ export async function getInstagramPosts(): Promise<InstagramPost[]> {
   url.searchParams.set("limit", "8");
 
   try {
-    const response = await fetch(url, { next: { revalidate: 3600 } });
+    const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) return fallbackPosts;
 
     const payload = (await response.json()) as { data?: InstagramApiPost[] };

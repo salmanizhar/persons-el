@@ -684,6 +684,53 @@ select:focus-visible {
   font-size: 0.88rem;
   overflow-wrap: anywhere;
 }
+.quote-review {
+  border-top: 1px solid #345466;
+  margin-top: 34px;
+  padding-top: 18px;
+  width: fit-content;
+  max-width: 100%;
+}
+.quote-review > p {
+  color: #5e6f8f;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+.trustpilot-compact-link {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #446679;
+  color: #121a3a;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 800;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s,
+    background 0.2s,
+    transform 0.2s;
+}
+.trustpilot-compact-link::before {
+  color: #00b67a;
+  content: "★";
+  font-size: 0.95rem;
+  line-height: 1;
+}
+.trustpilot-compact-link span {
+  color: #00b67a;
+}
+.trustpilot-compact-link:hover {
+  background: #fff;
+  border-color: #00b67a;
+  transform: translateY(-1px);
+}
 .legal-page h1 {
   font-size: clamp(3rem, 7vw, 6rem);
   margin-bottom: 50px;
@@ -2719,9 +2766,11 @@ body h3,
 }
 
 .footer-socials {
+  align-items: center;
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 .footer-socials > a,
 .footer-socials > span {
@@ -2751,6 +2800,26 @@ body h3,
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
+}
+.footer-socials .footer-review-link {
+  border-left: 1px solid #355263;
+  color: #cfe2e9;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 800;
+  height: auto;
+  margin-left: 4px;
+  padding: 1px 0 1px 14px;
+  width: auto;
+}
+.footer-socials .footer-review-link::before {
+  color: #00b67a;
+  content: "★";
+  margin-right: 5px;
+}
+.footer-socials .footer-review-link:hover,
+.footer-socials .footer-review-link:focus-visible {
+  color: #00b67a;
 }
 
 /* FAQ readability refinement */

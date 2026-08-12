@@ -37,6 +37,15 @@ export function Footer() {
                 <FacebookIcon />
               </span>
             )}
+            <a
+              className="footer-review-link"
+              href="https://se.trustpilot.com/review/personsel.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lämna omdöme om Perssons El på Trustpilot"
+            >
+              Trustpilot
+            </a>
           </div>
         </div>
         <div>

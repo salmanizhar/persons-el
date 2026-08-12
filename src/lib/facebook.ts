@@ -58,7 +58,7 @@ export async function getFacebookPosts(): Promise<InstagramPost[]> {
   url.searchParams.set("limit", "8");
 
   try {
-    const response = await fetch(url, { next: { revalidate: 3600 } });
+    const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) return fallbackPosts;
     const payload = (await response.json()) as { data?: FacebookApiPost[] };
     const posts = (payload.data || [])

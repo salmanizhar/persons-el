@@ -25,6 +25,17 @@ export function QuoteSection() {
               <span>Område</span>Helsingborg med omnejd
             </p>
           </div>
+          <div className="quote-review">
+            <p>Har vi redan hjälpt dig?</p>
+            <a
+              className="trustpilot-compact-link"
+              href="https://se.trustpilot.com/review/personsel.se"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lämna omdöme på <span>Trustpilot</span>
+            </a>
+          </div>
         </div>
         <QuoteForm />
       </div>
