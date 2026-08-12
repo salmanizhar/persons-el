@@ -5,6 +5,7 @@ export function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label="Perssons El – startsida">
+          {/* eslint-disable-next-line @next/next/no-img-element -- Fixed local logo avoids loading next/image client code in the shared header. */}
           <img
             src="/logo.png"
             alt="Perssons El"

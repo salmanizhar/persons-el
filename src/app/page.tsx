@@ -163,6 +163,7 @@ export default async function Home() {
                 rel="noreferrer"
               >
                 <div className="project-image">
+                  {/* eslint-disable-next-line @next/next/no-img-element -- Below-fold social previews avoid next/image client code on the home route. */}
                   <img
                     src={post.imageUrl}
                     alt={post.caption}
