@@ -718,13 +718,13 @@ select:focus-visible {
     transform 0.2s;
 }
 .trustpilot-compact-link::before {
-  color: #00b67a;
+  color: #007a52;
   content: "★";
   font-size: 0.95rem;
   line-height: 1;
 }
 .trustpilot-compact-link span {
-  color: #00b67a;
+  color: #007a52;
 }
 .trustpilot-compact-link:hover {
   background: #fff;
