@@ -9,6 +9,12 @@ import { getInstagramPosts } from "@/lib/instagram";
 import { homeSeoCopy } from "@/lib/home-seo-copy";
 import { services } from "@/lib/site";
 
+const heroImageSrc = "/images/hero-home-electrician-v3-736.webp";
+const heroImageSrcSet =
+  "/images/hero-home-electrician-v3-560.webp 560w, /images/hero-home-electrician-v3-736.webp 736w, /images/hero-home-electrician-v3-1056.webp 1056w";
+const heroImageSizes =
+  "(max-width: 700px) calc(100vw - 16px), (max-width: 900px) calc(100vw - 48px), 736px";
+
 export default async function Home() {
   const [instagramPosts, facebookPosts] = await Promise.all([
     getInstagramPosts(),
@@ -21,6 +27,14 @@ export default async function Home() {
   ];
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        href={heroImageSrc}
+        imageSrcSet={heroImageSrcSet}
+        imageSizes={heroImageSizes}
+        fetchPriority="high"
+      />
       <section className="hero hero-reference">
         <div className="shell hero-grid">
           <div className="hero-copy">
@@ -45,14 +59,15 @@ export default async function Home() {
             aria-label="Exempel på våra elinstallationer"
           >
             <div className="hero-photo hero-photo-main">
-              <Image
-                src="/images/hero-home-electrician-v3-lcp.webp"
+              {/* eslint-disable-next-line @next/next/no-img-element -- Direct responsive assets avoid /_next/image delay for the LCP photo. */}
+              <img
+                className="hero-photo-image"
+                src={heroImageSrc}
+                srcSet={heroImageSrcSet}
                 alt="Elektriker som kontrollerar en modern elcentral i ett svenskt hem"
-                fill
-                sizes="(max-width: 700px) calc(100vw - 16px), (max-width: 900px) calc(100vw - 48px), 560px"
-                preload
+                sizes={heroImageSizes}
+                decoding="async"
                 fetchPriority="high"
-                unoptimized
               />
             </div>
           </div>
