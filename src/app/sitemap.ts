@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { seoLandingPages } from "@/lib/seo-landing-pages";
 import { services, site } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -9,12 +10,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/kontakt",
     "/integritetspolicy",
   ];
-  return [...staticRoutes, ...services.map((s) => `/tjanster/${s.slug}`)].map(
-    (path) => ({
-      url: `${site.url}${path}`,
-      lastModified: new Date(),
-      changeFrequency: path === "" ? "weekly" : "monthly",
-      priority: path === "" ? 1 : path.startsWith("/tjanster") ? 0.8 : 0.6,
-    }),
-  );
+  const serviceRoutes = services.map((s) => `/tjanster/${s.slug}`);
+  const seoRoutes = seoLandingPages.map((page) => `/elektriker/${page.slug}`);
+
+  return [...staticRoutes, ...serviceRoutes, ...seoRoutes].map((path) => ({
+    url: `${site.url}${path}`,
+    lastModified: new Date(),
+    changeFrequency: path === "" ? "weekly" : "monthly",
+    priority:
+      path === ""
+        ? 1
+        : path.startsWith("/elektriker")
+          ? 0.9
+          : path.startsWith("/tjanster")
+            ? 0.8
+            : 0.6,
+  }));
 }

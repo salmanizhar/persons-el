@@ -4,9 +4,17 @@ import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { seoLandingPages } from "@/lib/seo-landing-pages";
 import { services, site } from "@/lib/site";
 
 const gtmId = "GTM-5RRZNKGP";
+const servedAreas = Array.from(
+  new Set(seoLandingPages.map((page) => page.location)),
+).map((name) => ({
+  "@type": "City",
+  name,
+  containedInPlace: { "@type": "Country", name: "Sverige" },
+}));
 
 const barlow = Barlow_Condensed({
   subsets: ["latin"],
@@ -65,11 +73,8 @@ export default function RootLayout({
         email: site.email,
         image: `${site.url}/opengraph-image`,
         logo: `${site.url}/logo.png`,
-        areaServed: {
-          "@type": "City",
-          name: site.city,
-          containedInPlace: { "@type": "Country", name: "Sverige" },
-        },
+        areaServed: servedAreas,
+        priceRange: "$$",
         address: {
           "@type": "PostalAddress",
           addressLocality: site.city,

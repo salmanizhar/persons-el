@@ -6,14 +6,14 @@ import { faqContent } from "@/lib/faq";
 import { getFacebookPosts } from "@/lib/facebook";
 import { getInstagramPosts } from "@/lib/instagram";
 import { homeSeoCopy } from "@/lib/home-seo-copy";
-import { services } from "@/lib/site";
+import { seoLandingPages } from "@/lib/seo-landing-pages";
+import { services, site } from "@/lib/site";
 
 const heroImageSrc = "/images/hero-home-electrician-v3-736.webp";
 const heroImageSrcSet =
   "/images/hero-home-electrician-v3-560.webp 560w, /images/hero-home-electrician-v3-736.webp 736w, /images/hero-home-electrician-v3-1056.webp 1056w";
 const heroImageSizes =
   "(max-width: 700px) calc(100vw - 16px), (max-width: 900px) calc(100vw - 48px), 736px";
-
 export default async function Home() {
   const [instagramPosts, facebookPosts] = await Promise.all([
     getInstagramPosts(),
@@ -108,6 +108,79 @@ export default async function Home() {
           <div className="metric">
             <strong>Snabbt</strong>
             <span>Svar på din förfrågan</span>
+          </div>
+        </div>
+      </section>
+      <section className="section home-seo-section">
+        <div className="shell home-seo-grid">
+          <div className="home-seo-intro">
+            <p className="eyebrow">Elektriker Helsingborg</p>
+            <h2>Behörig hjälp med el, pris och nästa steg.</h2>
+            <p>
+              Letar du efter en elektriker i Helsingborg som kan hjälpa med
+              installation, felsökning, belysning eller elcentral? Perssons El
+              arbetar lokalt med tydliga besked, praktiska lösningar och
+              noggrant utförda elarbeten för hem, fastigheter och företag.
+            </p>
+          </div>
+          <div className="seo-info-list">
+            <article>
+              <span>01</span>
+              <h3>Vad kostar en elektriker?</h3>
+              <p>
+                Priset beror på omfattning, material, tillgänglighet och vad som
+                behöver kontrolleras. Skicka en beskrivning så återkommer vi med
+                ett tydligt nästa steg innan arbetet startar.
+              </p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>ROT-avdrag för elarbete</h3>
+              <p>
+                Många elarbeten i bostad kan omfattas av ROT-avdrag på
+                arbetskostnaden. Vi hjälper dig att reda ut vad som gäller för
+                installationen eller felsökningen.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Privat, företag och fastigheter</h3>
+              <p>
+                Vi hjälper med el i villor, lägenheter, verksamhetslokaler och
+                fastigheter i Helsingborg med omnejd.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section className="section area-section">
+        <div className="shell area-grid">
+          <div className="area-copy">
+            <p className="eyebrow">Områden och tjänster</p>
+            <h2>Elektriker i Helsingborg med omnejd.</h2>
+            <p>
+              Perssons El tar uppdrag i Helsingborg och närliggande orter. Välj
+              det som passar ditt behov, eller ring {site.phone} om du vill
+              beskriva jobbet direkt.
+            </p>
+            <div className="area-note" aria-label="Serviceområden">
+              <span>Helsingborg</span>
+              <span>Elinstallation</span>
+              <span>Felsökning</span>
+            </div>
+          </div>
+          <div className="area-link-grid">
+            {seoLandingPages.slice(0, 9).map((page, index) => (
+              <Link
+                className={index < 3 ? "is-priority" : undefined}
+                href={`/elektriker/${page.slug}`}
+                key={page.slug}
+              >
+                <span>{page.eyebrow}</span>
+                <strong>{page.title}</strong>
+                <Arrow />
+              </Link>
+            ))}
           </div>
         </div>
       </section>
