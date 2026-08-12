@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export function Header() {
@@ -6,13 +5,12 @@ export function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label="Perssons El – startsida">
-          <Image
+          <img
             src="/logo.png"
             alt="Perssons El"
             width={300}
             height={82}
-            sizes="(max-width: 360px) 125px, 188px"
-            quality={40}
+            decoding="async"
           />
         </Link>
         <nav aria-label="Huvudnavigation">

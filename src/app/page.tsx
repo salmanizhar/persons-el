@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FaqSection } from "@/components/faq-section";
 import { Arrow } from "@/components/icons";
@@ -164,12 +163,11 @@ export default async function Home() {
                 rel="noreferrer"
               >
                 <div className="project-image">
-                  <Image
+                  <img
                     src={post.imageUrl}
                     alt={post.caption}
-                    fill
-                    sizes="(max-width: 700px) 100vw, 33vw"
-                    quality={60}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <p className="project-label">{platform}</p>
