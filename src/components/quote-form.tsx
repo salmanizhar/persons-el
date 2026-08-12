@@ -1,21 +1,6 @@
-"use client";
-
-import { useState } from "react";
-
-type Status = "idle" | "sending" | "success" | "error";
-
 export function QuoteForm() {
-  const [status, setStatus] = useState<Status>("idle");
-  async function submit(formData: FormData) {
-    setStatus("sending");
-    const response = await fetch("/api/offert", {
-      method: "POST",
-      body: formData,
-    });
-    setStatus(response.ok ? "success" : "error");
-  }
   return (
-    <form className="quote-form" action={submit}>
+    <form className="quote-form" action="/api/offert" method="post">
       <div className="field">
         <label htmlFor="name">Namn</label>
         <input id="name" name="name" autoComplete="name" required />
@@ -60,15 +45,9 @@ export function QuoteForm() {
         </label>
       </div>
       <div className="field-wide form-end">
-        <button className="button" disabled={status === "sending"}>
-          {status === "sending" ? "Skickar…" : "Skicka förfrågan →"}
-        </button>
+        <button className="button">Skicka förfrågan →</button>
         <p className="form-status" aria-live="polite">
-          {status === "success"
-            ? "Tack! Vi har tagit emot din förfrågan."
-            : status === "error"
-              ? "Det gick inte att skicka. Ring eller mejla oss i stället."
-              : "Vi återkommer så snart vi kan."}
+          Vi återkommer så snart vi kan.
         </p>
       </div>
     </form>
