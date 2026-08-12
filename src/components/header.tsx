@@ -7,10 +7,12 @@ export function Header() {
         <Link className="brand" href="/" aria-label="Perssons El – startsida">
           {/* eslint-disable-next-line @next/next/no-img-element -- Fixed local logo avoids loading next/image client code in the shared header. */}
           <img
-            src="/logo.png"
+            src="/logo-188.webp"
+            srcSet="/logo-125.webp 125w, /logo-188.webp 188w, /logo-300.webp 300w"
+            sizes="(max-width: 360px) 125px, 188px"
             alt="Perssons El"
-            width={300}
-            height={82}
+            width={188}
+            height={22}
             decoding="async"
           />
         </Link>
