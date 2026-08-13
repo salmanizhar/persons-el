@@ -27,16 +27,17 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "elinstallation",
-    title: "Elinstallation",
+    title: "Elinstallationer och nätverk",
     area: "nordvästra Skåne",
-    short: "Säkra installationer för hem, företag och renoveringar.",
+    short:
+      "Säkra installationer och nätverk för hem, företag och renoveringar.",
     intro:
-      "Vi hjälper dig med genomtänkta elinstallationer i nordvästra Skåne – från nya uttag och dragningar till kompletta lösningar vid ombyggnad.",
+      "Vi hjälper dig med genomtänkta elinstallationer och nätverk i nordvästra Skåne – från nya uttag, dragningar och datauttag till kompletta lösningar vid ombyggnad.",
     image: "/images/service-poolcentral.jpg",
-    alt: "Elinstallation med poolcentral och tydlig kabeldragning",
+    alt: "Elinstallation och nätverksdragning med tydlig kabeldragning",
     bullets: [
       "Nya uttag och strömbrytare",
-      "Kabeldragning och ombyggnad",
+      "Kabeldragning, nätverk och ombyggnad",
       "Installation för kök och andra rum",
     ],
   },

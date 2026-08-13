@@ -26,7 +26,7 @@ export function QuoteForm() {
       <div className="field field-wide">
         <label htmlFor="service">Vad behöver du hjälp med?</label>
         <select id="service" name="service">
-          <option>Elinstallation</option>
+          <option>Elinstallationer och nätverk</option>
           <option>Belysning</option>
           <option>Elcentral eller laddbox</option>
           <option>Felsökning och renovering</option>

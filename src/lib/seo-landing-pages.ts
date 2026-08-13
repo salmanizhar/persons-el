@@ -207,7 +207,7 @@ export const seoLandingPages: SeoLandingPage[] = [
         "Svar på sådant som är bra att veta innan installationen planeras.",
       items: [
         {
-          question: "Vad ingår i en elinstallation?",
+          question: "Vad ingår i elinstallationer och nätverk?",
           answer:
             "Det kan vara nya uttag, strömbrytare, kabeldragning, belysning eller el vid renovering och ombyggnad.",
         },

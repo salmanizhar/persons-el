@@ -141,14 +141,14 @@ export const faqContent = {
 const serviceFaqs: Record<string, FaqItem[]> = {
   elinstallation: [
     {
-      question: "Vad ingår i en elinstallation?",
+      question: "Vad ingår i elinstallationer och nätverk?",
       answer:
-        "Det kan till exempel vara nya uttag och strömbrytare, kabeldragning, ombyggnad eller installation i kök och andra rum.",
+        "Det kan till exempel vara nya uttag och strömbrytare, kabeldragning, nätverk, ombyggnad eller installation i kök och andra rum.",
     },
     {
       question: "Kan ni hjälpa till vid renovering?",
       answer:
-        "Ja, vi planerar och utför elinstallationer vid renovering och ombyggnad utifrån rummets användning och befintliga förutsättningar.",
+        "Ja, vi planerar och utför elinstallationer och nätverk vid renovering och ombyggnad utifrån rummets användning och befintliga förutsättningar.",
     },
   ],
   belysning: [
