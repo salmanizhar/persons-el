@@ -1,17 +1,17 @@
-# Mobile SEO Title Character Spacing
+# SEO Title Character Spacing
 
 ## Goal
 
-Improve the readability of large SEO landing-page titles on mobile by adding space between characters, without changing spacing between title lines.
+Improve the readability of large SEO landing-page titles by adding space between characters, without changing spacing between title lines.
 
 ## Design
 
-- Apply the change only to `.seo-hero h1` at the existing mobile breakpoint.
-- Set `letter-spacing` to `-0.015em` on mobile instead of inheriting the tighter desktop value of `-0.055em`.
-- Keep the current font family, font size, weight, line height, wrapping, and desktop styling unchanged.
+- Set `.seo-hero h1` to `letter-spacing: 0` on desktop.
+- Keep the mobile override at `letter-spacing: -0.015em`.
+- Keep the current font family, font size, weight, line height, and wrapping unchanged.
 
 ## Validation
 
-- Confirm the mobile rule overrides the desktop character spacing.
+- Confirm the desktop and mobile character-spacing rules apply at their intended breakpoints.
 - Run lint and the production build.
 - Confirm no unrelated layout rules change.
