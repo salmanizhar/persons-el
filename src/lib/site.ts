@@ -1,12 +1,12 @@
 export const site = {
   name: "Perssons El",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://personssel.se",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://perssonsel.se",
   phone: process.env.NEXT_PUBLIC_PHONE || "0768-107 050",
   phoneHref: (process.env.NEXT_PUBLIC_PHONE || "+46768107050").replace(
     /\s/g,
     "",
   ),
-  email: process.env.NEXT_PUBLIC_EMAIL || "info@personssel.se",
+  email: process.env.NEXT_PUBLIC_EMAIL || "info@perssonsel.se",
   city: "Helsingborg",
   instagramHandle: "@perssons_el",
   instagramUrl: "https://www.instagram.com/perssons_el/",
