@@ -16,6 +16,8 @@ export const site = {
 export type Service = {
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   area: string;
   short: string;
   intro: string;
@@ -27,18 +29,37 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "elinstallation",
-    title: "Elinstallationer och nätverk",
+    title: "Elinstallationer",
     area: "nordvästra Skåne",
-    short:
-      "Säkra installationer och nätverk för hem, företag och renoveringar.",
+    short: "Säkra elinstallationer för hem, företag och renoveringar.",
     intro:
-      "Vi hjälper dig med genomtänkta elinstallationer och nätverk i nordvästra Skåne – från nya uttag, dragningar och datauttag till kompletta lösningar vid ombyggnad.",
+      "Vi hjälper dig med genomtänkta elinstallationer i nordvästra Skåne – från nya uttag och kabeldragning till kompletta lösningar vid renovering och ombyggnad.",
     image: "/images/service-poolcentral.jpg",
     alt: "Elinstallation och nätverksdragning med tydlig kabeldragning",
     bullets: [
       "Nya uttag och strömbrytare",
-      "Kabeldragning, nätverk och ombyggnad",
+      "Kabeldragning, komplettering och ombyggnad",
       "Installation för kök och andra rum",
+    ],
+  },
+  {
+    slug: "natverksinstallation",
+    title: "Nätverksinstallation",
+    seoTitle: "Nätverksinstallatör Helsingborg",
+    seoDescription:
+      "Nätverksinstallatör i Helsingborg för kabeldragning, datauttag, patchpaneler och accesspunkter i hem, kontor och fastigheter. Begär offert.",
+    area: "Helsingborg och nordvästra Skåne",
+    short:
+      "Kabeldragning, datauttag och nätverk för hem, kontor och fastigheter.",
+    intro:
+      "Behöver du nätverksinstallatör i Helsingborg? Vi planerar och installerar stabila nätverk med kabeldragning, datauttag, patchpaneler och accesspunkter för hem, kontor och fastigheter.",
+    image: "/images/service-elinstallation-v2.png",
+    alt: "Nätverksinstallatör som planerar kabeldragning och datauttag",
+    bullets: [
+      "Nätverkskabel och datauttag",
+      "Patchpaneler, rack och strukturerad kabeldragning",
+      "Anslutning och placering av accesspunkter",
+      "Felsökning och uppgradering av befintliga nätverk",
     ],
   },
   {

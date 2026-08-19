@@ -141,14 +141,31 @@ export const faqContent = {
 const serviceFaqs: Record<string, FaqItem[]> = {
   elinstallation: [
     {
-      question: "Vad ingår i elinstallationer och nätverk?",
+      question: "Vad ingår i en elinstallation?",
       answer:
-        "Det kan till exempel vara nya uttag och strömbrytare, kabeldragning, nätverk, ombyggnad eller installation i kök och andra rum.",
+        "Det kan till exempel vara nya uttag och strömbrytare, kabeldragning, ombyggnad eller installation i kök och andra rum.",
     },
     {
       question: "Kan ni hjälpa till vid renovering?",
       answer:
-        "Ja, vi planerar och utför elinstallationer och nätverk vid renovering och ombyggnad utifrån rummets användning och befintliga förutsättningar.",
+        "Ja, vi planerar och utför elinstallationer vid renovering och ombyggnad utifrån rummets användning och befintliga förutsättningar.",
+    },
+  ],
+  natverksinstallation: [
+    {
+      question: "Vad kan en nätverksinstallatör hjälpa till med?",
+      answer:
+        "En nätverksinstallatör kan planera och dra nätverkskabel, installera datauttag och patchpaneler samt förbereda anslutningar för accesspunkter i hem, kontor och fastigheter.",
+    },
+    {
+      question: "Kan ni förbättra ett befintligt nätverk?",
+      answer:
+        "Ja, vi kan gå igenom befintlig kabeldragning och anslutningar, felsöka problem och föreslå hur nätverket kan kompletteras eller byggas om.",
+    },
+    {
+      question: "Installerar ni nätverk i både bostäder och lokaler?",
+      answer:
+        "Ja, lösningen planeras efter byggnadens förutsättningar, antal anslutningar och hur nätverket ska användas i vardagen.",
     },
   ],
   belysning: [

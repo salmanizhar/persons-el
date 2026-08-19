@@ -156,7 +156,12 @@ export const seoLandingPages: SeoLandingPage[] = [
         },
       ],
     },
-    related: ["helsingborg", "angelholm", "hoganas", "landskrona"],
+    related: [
+      "elinstallation-helsingborg",
+      "angelholm",
+      "hoganas",
+      "landskrona",
+    ],
   },
   {
     slug: "elinstallation-helsingborg",
@@ -224,7 +229,7 @@ export const seoLandingPages: SeoLandingPage[] = [
       ],
     },
     related: [
-      "helsingborg",
+      "elfirma-helsingborg",
       "felsokning-el-helsingborg",
       "laddbox-helsingborg",
     ],
@@ -293,11 +298,7 @@ export const seoLandingPages: SeoLandingPage[] = [
         },
       ],
     },
-    related: [
-      "helsingborg",
-      "elinstallation-helsingborg",
-      "elfirma-helsingborg",
-    ],
+    related: ["elfirma-helsingborg", "elinstallation-helsingborg", "angelholm"],
   },
   {
     slug: "laddbox-helsingborg",
@@ -363,11 +364,7 @@ export const seoLandingPages: SeoLandingPage[] = [
         },
       ],
     },
-    related: [
-      "elinstallation-helsingborg",
-      "helsingborg",
-      "elfirma-helsingborg",
-    ],
+    related: ["elinstallation-helsingborg", "elfirma-helsingborg", "angelholm"],
   },
   {
     slug: "angelholm",
@@ -376,12 +373,12 @@ export const seoLandingPages: SeoLandingPage[] = [
     description:
       "Perssons El hjälper kunder i Ängelholm med elinstallation, belysning, elcentraler, laddboxar och felsökning.",
     heroLead:
-      "Behöver du elektriker i Ängelholm? Perssons El hjälper med säkra elarbeten för hem, fastigheter och företag.",
+      "Behöver du elektriker eller elfirma i Ängelholm? Perssons El hjälper med säkra elarbeten för hem, fastigheter och företag.",
     primaryKeyword: "elektriker Ängelholm",
     location: "Ängelholm",
     introTitle: "Elektriker för Ängelholm och nordvästra Skåne.",
     intro: [
-      "Vi hjälper kunder i Ängelholm med elarbeten där planering, tydlighet och säkerhet är viktigt. Det kan handla om allt från nya uttag och belysning till felsökning eller laddbox.",
+      "Som elfirma för Ängelholm hjälper vi kunder med elarbeten där planering, tydlighet och säkerhet är viktigt. Det kan handla om allt från nya uttag och belysning till felsökning eller laddbox.",
       "Beskriv uppdraget och platsen så återkommer vi med nästa steg.",
     ],
     bullets: [
@@ -433,7 +430,7 @@ export const seoLandingPages: SeoLandingPage[] = [
         },
       ],
     },
-    related: ["helsingborg", "hoganas", "landskrona", "bjuv"],
+    related: ["elfirma-helsingborg", "hoganas", "landskrona", "bjuv"],
   },
   {
     slug: "hoganas",
@@ -499,7 +496,7 @@ export const seoLandingPages: SeoLandingPage[] = [
         },
       ],
     },
-    related: ["helsingborg", "angelholm", "landskrona", "bjuv"],
+    related: ["elfirma-helsingborg", "angelholm", "landskrona", "bjuv"],
   },
   {
     slug: "landskrona",
@@ -565,7 +562,7 @@ export const seoLandingPages: SeoLandingPage[] = [
         },
       ],
     },
-    related: ["helsingborg", "hoganas", "angelholm", "bjuv"],
+    related: ["elfirma-helsingborg", "hoganas", "angelholm", "bjuv"],
   },
   {
     slug: "bjuv",
@@ -631,7 +628,7 @@ export const seoLandingPages: SeoLandingPage[] = [
         },
       ],
     },
-    related: ["helsingborg", "astorp", "hoganas", "angelholm"],
+    related: ["elfirma-helsingborg", "astorp", "hoganas", "angelholm"],
   },
   {
     slug: "astorp",
@@ -645,8 +642,8 @@ export const seoLandingPages: SeoLandingPage[] = [
     location: "Åstorp",
     introTitle: "Elhjälp i Åstorp med tydliga nästa steg.",
     intro: [
-      "Vi hjälper dig att planera och utföra elarbeten i Åstorp med fokus på säkerhet, funktion och tydlig kommunikation.",
-      "Det kan handla om elinstallation, felsökning, belysning, laddbox eller elcentral.",
+      "Vi hjälper privatpersoner, fastighetsägare och företag att planera och utföra elarbeten i Åstorp med fokus på säkerhet, funktion och tydlig kommunikation.",
+      "Det kan handla om elinstallation, felsökning, belysning, laddbox eller elcentral. Beskriv platsen och arbetet i förfrågan så kan vi bedöma vad uppdraget kräver och återkomma med nästa steg.",
     ],
     bullets: [
       "Elinstallation och komplettering",
@@ -697,7 +694,7 @@ export const seoLandingPages: SeoLandingPage[] = [
         },
       ],
     },
-    related: ["helsingborg", "bjuv", "angelholm", "hoganas"],
+    related: ["elfirma-helsingborg", "bjuv", "angelholm", "hoganas"],
   },
 ];
 

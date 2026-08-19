@@ -23,8 +23,8 @@ export async function generateMetadata({
   const s = services.find((x) => x.slug === slug);
   if (!s) return {};
   return createPageMetadata({
-    title: `${s.title} i ${s.area}`,
-    description: s.intro,
+    title: s.seoTitle ?? `${s.title} i ${s.area}`,
+    description: s.seoDescription ?? s.intro,
     path: `/tjanster/${slug}`,
   });
 }

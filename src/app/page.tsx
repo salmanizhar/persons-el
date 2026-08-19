@@ -170,17 +170,20 @@ export default async function Home() {
             </div>
           </div>
           <div className="area-link-grid">
-            {seoLandingPages.slice(0, 9).map((page, index) => (
-              <Link
-                className={index < 3 ? "is-priority" : undefined}
-                href={`/elektriker/${page.slug}`}
-                key={page.slug}
-              >
-                <span>{page.eyebrow}</span>
-                <strong>{page.title}</strong>
-                <Arrow />
-              </Link>
-            ))}
+            {seoLandingPages
+              .filter((page) => page.slug !== "helsingborg")
+              .slice(0, 9)
+              .map((page, index) => (
+                <Link
+                  className={index < 3 ? "is-priority" : undefined}
+                  href={`/elektriker/${page.slug}`}
+                  key={page.slug}
+                >
+                  <span>{page.eyebrow}</span>
+                  <strong>{page.title}</strong>
+                  <Arrow />
+                </Link>
+              ))}
           </div>
         </div>
       </section>

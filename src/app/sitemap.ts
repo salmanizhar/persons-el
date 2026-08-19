@@ -11,7 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/integritetspolicy",
   ];
   const serviceRoutes = services.map((s) => `/tjanster/${s.slug}`);
-  const seoRoutes = seoLandingPages.map((page) => `/elektriker/${page.slug}`);
+  const seoRoutes = seoLandingPages
+    .filter((page) => page.slug !== "helsingborg")
+    .map((page) => `/elektriker/${page.slug}`);
 
   return [...staticRoutes, ...serviceRoutes, ...seoRoutes].map((path) => ({
     url: `${site.url}${path}`,

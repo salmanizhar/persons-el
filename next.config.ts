@@ -3,6 +3,15 @@ import path from "node:path";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: "/elektriker/helsingborg",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
   turbopack: { root: path.resolve(process.cwd()) },
   experimental: {
     inlineCss: true,
