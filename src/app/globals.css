@@ -772,7 +772,7 @@ select:focus-visible {
   grid-template-columns: 1.1fr 0.9fr;
 }
 .seo-hero h1 {
-  letter-spacing: -0.055em;
+  letter-spacing: 0;
   margin: 0;
   font-size: clamp(4rem, 7vw, 7rem);
   font-weight: 850;
@@ -1189,6 +1189,7 @@ select:focus-visible {
   }
   .seo-hero h1 {
     font-size: clamp(3.2rem, 16vw, 4.8rem);
+    letter-spacing: -0.015em;
   }
   .seo-hero-proof {
     padding: 26px;
